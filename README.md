@@ -1,6 +1,6 @@
 # Updates 9/5
-* Weaver Spider is completed\
-* Leaping Spider is completed\
+* Weaver Spider is completed
+* Leaping Spider is completed
 
 ## Spiders
 ### Weaver Spider
