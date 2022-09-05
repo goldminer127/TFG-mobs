@@ -1,0 +1,8 @@
+WeaverSpider:
+  Type: CAVE_SPIDER
+  Skills:
+  - skill{s=WebShot}
+LeapingSpider:
+  Type: CAVE_SPIDER
+  Skills:
+  - skill{s=Leap}
