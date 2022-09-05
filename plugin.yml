@@ -1,0 +1,43 @@
+name: MythicMobs
+author: Lumine
+main: io.lumine.mythic.bukkit.MythicBukkit
+version: 5.0.2-a86da3b0
+api-version: 1.13
+softdepend:
+- Multiverse-Core
+- Heroes
+- PhatLoots
+- Vault
+- MagicSpells
+- MiniaturePets
+- BarAPI
+- LanguageAPI
+- LibsDisguises
+- WorldGuard
+- Holograms
+- HolographicDisplays
+- PlaceholderAPI
+- CMI
+- ModelEngine
+loadbefore: [Quests,Nations]
+description: The total solution for all things mob-related.
+commands:
+  mythicmobs:
+    description: MythicMobs base command
+    aliases: [mm]
+  mythicmobslegacy:
+    description: MythicMobs Legacy Commands
+    aliases: [mml]
+  spawnmob:
+    description: Spawn a mob
+    aliases: [spawnmythicmob]
+permissions:
+  mythicmobs.admin:
+    description: Gives access to everything!
+    default: op
+  mythicmobs.reload:
+    description: Gives access /mm reload!
+    default: op
+  mythicmobs.signal:
+    description: Gives access /mm signal!
+    default: op
