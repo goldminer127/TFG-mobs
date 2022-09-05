@@ -1,8 +1,8 @@
 WeaverSpider:
   Type: CAVE_SPIDER
   Skills:
-  - skill{s=WebShot}
+  - skill{s=WebShot} @target ~onTimer:20
 LeapingSpider:
   Type: CAVE_SPIDER
   Skills:
-  - skill{s=Leap}
+  - skill{s=Leap} @target ~onTimer:20

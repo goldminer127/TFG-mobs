@@ -1,13 +1,14 @@
 #Slowness Spider
 WebShot:
-  Cooldown: 40
+  Cooldown: 10
   Skills:
-  - projectile{bulletType=ITEM;material=SPIDER_WEB;onHit=Slowness;v=8;i=1;g=1} @target
-Slowness:
+  - projectile{bulletType=ITEM;material=COBWEB;onHit=SlownessWeb;v=36;i=1;g=0.25;syo=3}
+SlownessWeb:
   Skills:
+  - damage{a=1}
   - potion{type=SLOW;duration=60;level=2;p=false}
 #Leaping Spider
 Leap:
-  Cooldown: 100
+  Cooldown: 6.5
   Skills:
-  - leap{v=100;noise=2} @target
+  - leap{v=400;noise=2}
