@@ -1,0 +1,41 @@
+CobbleHead:
+  Id: COBBLESTONE
+  Attributes:
+    Head:
+      Armor: 3
+      KnockbackResistance: 50%
+      MovementSpeed: -0.02
+StoneHead:
+  Id: STONE
+  Attributes:
+    Head:
+      Armor: 10
+      KnockbackResistance: 99%
+      MovementSpeed: -0.1
+PetrifiedChest:
+  Id: LEATHER_CHESTPLATE
+  Options:
+    Color: 200,200,200
+  Attributes:
+    Chest:
+      Armor: 3
+      KnockbackResistance: 50%
+      MovementSpeed: -0.02
+PetrifiedLegs:
+  Id: LEATHER_LEGGINGS
+  Options:
+    Color: 200,200,200
+  Attributes:
+    Legs:
+      Armor: 3
+      KnockbackResistance: 50%
+      MovementSpeed: -0.02
+PetrifiedFeet:
+  Id: LEATHER_BOOTS
+  Options:
+    Color: 200,200,200
+  Attributes:
+    Feet:
+      Armor: 3
+      KnockbackResistance: 50%
+      MovementSpeed: -0.02

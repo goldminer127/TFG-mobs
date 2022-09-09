@@ -1,6 +1,8 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #  
+ZOMBIE:
+  Faction: Zombie
 
 CAVE_SPIDER:
   Health: 30

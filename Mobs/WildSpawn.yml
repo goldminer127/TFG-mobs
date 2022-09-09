@@ -1,0 +1,89 @@
+#Zombie Based
+BuddingZombie:
+  Type: ZOMBIE
+  AIGoalSelectors:
+  - clear
+  - randomlookaround
+  - randomstroll
+  - fleeplayers
+  - fleegolems
+  - fleewolf
+  Skills:
+  - skill{s=SummonBabyZombie} @self ~onTimer:200
+  Drops:
+  - exp 5 0.5
+  - exp 10 0.5
+PetrifyingZombie:
+  Type: ZOMBIE
+  Damage: 4.5
+  Faction: StoneInfected
+  Equipment:
+  - CobbleHead HEAD
+  - PetrifiedChest CHEST
+  - PetrifiedLegs LEGS
+  - PetrifiedFeet FEET
+  - AIR HAND
+  AITargetSelectors:
+  - SpecificFaction Zombie
+  Skills:
+  - skill{s=InfectPetrify} @target ~onAttack
+  - skill{s=FullPetrify} ~onTimer:1000
+  - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
+PetrifyingZombieInfected:
+  Type: ZOMBIE
+  Damage: 4.5
+  Faction: StoneInfected
+  Equipment:
+  - CobbleHead HEAD
+  - PetrifiedChest CHEST
+  - PetrifiedLegs LEGS
+  - PetrifiedFeet FEET
+  - AIR HAND
+  AITargetSelectors:
+  - SpecificFaction Zombie
+  Skills:
+  - skill{s=InfectPetrify} @target ~onAttack
+  - skill{s=FullPetrify} ~onTimer:1000
+PetrifiedZombie:
+  Type: ZOMBIE
+  Health: 30
+  Damage: 10
+  Faction: StoneInfected
+  Equipment:
+  - StoneHead HEAD
+  - PetrifiedChest CHEST
+  - PetrifiedLegs LEGS
+  - PetrifiedFeet FEET
+  - AIR HAND
+  Skills:
+  - skill{s=HardResistance} @target ~onDamaged
+
+#Skeleton Based
+MeleeSkeleton:
+  Type: SKELETON
+  Damage: 3.5
+  Equipment:
+  - AIR HAND
+  AIGoalSelectors:
+  - clear
+  - randomlookaround
+  - randomstroll
+  - meleeattack
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+  Drops:
+  - BONE 1-3 1
+  
+
+#Creeper Based
+Leaper:
+  Type: Creeper
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=LeaperLeap} @target ~onEnterCombat
+  Drops:
+  - exp 15 1
+  - GUNPOWDER 1-3 1
+  

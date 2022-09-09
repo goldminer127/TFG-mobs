@@ -1,0 +1,10 @@
+BabyZombie:
+  Type: BABY_ZOMBIE
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  Options:
+    PreventOtherDrops: true
