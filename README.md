@@ -15,8 +15,8 @@ Damage: Normal\
 Abilities:
 * Leaps towards target every 6.5 seconds
 
-##WildSpawn Mobs
-###Leaper
+## WildSpawn Mobs
+### Leaper
 Type: Creeper\
 Damage: Normal\
 Abilities:
@@ -24,7 +24,7 @@ Abilities:
 * Gives a visual queue when creeper is about to leap
 * Can only leap once
 
-##Melee Skeleton
+## Melee Skeleton
 Type: Skeleton
 Damage: 3.5
 Notes:
@@ -32,7 +32,7 @@ Notes:
 Abilities:
 * Runs faster than zombies
 
-###Budding Zombie
+### Budding Zombie
 Type: Zombie\
 Damage: Normal\
 Notes:
@@ -40,7 +40,7 @@ Notes:
 Abilities:
 * Spawns a baby zombie every 10 seconds
 
-###Petrifying Zombie
+### Petrifying Zombie
 Type: Zombie
 Damage: 4.5
 Notes:
@@ -51,7 +51,7 @@ Abilities:
 * Turns into a Petrified Zombie after 30 seconds of infection
 * Reduced knockback
 
-###Petrified Zombie
+### Petrified Zombie
 Type: Zombie
 Health: 30
 Damage: 10
