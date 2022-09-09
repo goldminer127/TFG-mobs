@@ -19,14 +19,15 @@ Abilities:
 ### Leaper
 Type: Creeper\
 Damage: Normal\
+Notes:
+* Gives a visual queue when creeper is about to leap
 Abilities:
 * Leaps towards the target at medium distance
-* Gives a visual queue when creeper is about to leap
 * Can only leap once
 
 ## Melee Skeleton
-Type: Skeleton
-Damage: 3.5
+Type: Skeleton\
+Damage: 3.5\
 Notes:
 * Does not spawn with a weapon on hand
 Abilities:
@@ -37,6 +38,7 @@ Type: Zombie\
 Damage: Normal\
 Notes:
 * Runs away from players
+* Creates a pop sound when a baby zombie is spawned
 Abilities:
 * Spawns a baby zombie every 10 seconds
 
