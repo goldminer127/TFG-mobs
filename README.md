@@ -1,5 +1,5 @@
-# Updates 9/5
-* Wild mobs added. Review and testing required
+# Updates 9/9
+New wild mobs were added. Natural spawn has not been implemented, thus will not spawn yet in a world. Testing is required for balancing. Natural zombies will now spawn as Zombie faction, this is for Petrifying Zombies to target them. 
 
 ## Spiders
 ### Weaver Spider
