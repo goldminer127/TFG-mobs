@@ -1,5 +1,5 @@
 # Updates 9/5
-*Wild mobs added. Review and testing required
+* Wild mobs added. Review and testing required
 
 ## Spiders
 ### Weaver Spider
