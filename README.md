@@ -41,8 +41,8 @@ Abilities:
 * Spawns a baby zombie every 10 seconds
 
 ### Petrifying Zombie
-Type: Zombie
-Damage: 4.5
+Type: Zombie\
+Damage: 4.5\
 Notes:
 * Infected state has cobbled head
 * Has a medium amount of armor
@@ -52,9 +52,9 @@ Abilities:
 * Reduced knockback
 
 ### Petrified Zombie
-Type: Zombie
-Health: 30
-Damage: 10
+Type: Zombie\
+Health: 30\
+Damage: 10\
 Notes:
 * Has high amount of armor
 * Is not infectious
