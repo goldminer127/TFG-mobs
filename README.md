@@ -25,7 +25,7 @@ Abilities:
 * Leaps towards the target at medium distance
 * Can only leap once
 
-## Melee Skeleton
+### Melee Skeleton
 Type: Skeleton\
 Damage: 3.5\
 Notes:
