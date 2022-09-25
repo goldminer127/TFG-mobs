@@ -1,0 +1,42 @@
+WeaverSpider:
+  Type: CAVE_SPIDER
+  Health: 24
+  Skills:
+  - skill{s=WebShot} @target ~onTimer:20
+  Drops:
+  - mmoitems{type=MATERIAL;id=HALLOWEDHIDE} 1to2 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDEYE} 1to2 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDSTRING} 1to2 0.3
+  - mmoitems{type=MATERIAL;id=HALLOWEDMANDIBLE} 1to2 0.3
+  - mmoitems{type=MATERIAL;id=VENOMSACK} 1 0.1
+LeapingSpider:
+  Type: CAVE_SPIDER
+  Health: 24
+  Skills:
+  - skill{s=Leap} @target ~onTimer:20
+  Drops:
+  - mmoitems{type=MATERIAL;id=HALLOWEDHIDE} 1to2 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDEYE} 1to2 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDSTRING} 1to2 0.3
+  - mmoitems{type=MATERIAL;id=HALLOWEDMANDIBLE} 1to2 0.3
+  - mmoitems{type=MATERIAL;id=VENOMSACK} 1 0.1
+MiraBoss:
+  Type: SPIDER
+  Display: 'Mira'
+  Health: 500
+  Damage: 10
+  Skills:
+  - skill{s=Leap} @target ~onTimer:10
+  - skill{s=WebShot} @target ~onTimer:20
+  Drops:
+  - mmoitems{type=MATERIAL;id=HALLOWEDHIDE} 2to3 0.5
+  - mmoitems{type=MATERIAL;id=HALLOWEDEYE} 2to3 0.5
+  - mmoitems{type=MATERIAL;id=HALLOWEDSTRING} 2to3 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDMANDIBLE} 2to3 0.4
+  - mmoitems{type=MATERIAL;id=VENOMSACK} 1to3 0.2
+  BossBar:
+    Enabled: true
+    Title: 'Mira'
+    Range: 20
+    Color: RED
+    Style: SOLID
