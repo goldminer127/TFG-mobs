@@ -1,0 +1,9 @@
+TameWithGrass:
+  Conditions:
+  - hasowner false
+  TargetConditions:
+  - holding{m=GRASS} true
+  Skills:
+  - effect:particlesphere{particle=heart;amount=5;radius=1;vs=1;s=0;repeat=2;repeatInterval=2} @self
+  - consumeslot{amount=1}
+  - setowner @trigger

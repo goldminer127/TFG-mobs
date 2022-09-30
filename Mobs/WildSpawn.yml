@@ -87,3 +87,26 @@ Leaper:
   - exp 15 1
   - GUNPOWDER 1-3 1
   
+#Wither Skeleton Based
+FallenViking:
+  Health: 22
+  Type: WITHER_SKELETON
+  Equipment:
+  - CARVED_PUMPKIN HEAD
+  - IRON_AXE HAND
+  - SHIELD OFFHAND
+
+
+
+
+
+#PASSIVE MOBS
+#Rabbit Based
+MushroomFriend:
+  Type: RABBIT
+  Options:
+    FollowRange: 50
+  AIGoalSelectors:
+  - gotoowner 5
+  Skills:
+  - skill{s=TameWithGrass} @trigger ~onInteract

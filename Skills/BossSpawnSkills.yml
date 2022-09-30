@@ -1,0 +1,6 @@
+SpawnMira:
+  Conditions:
+  - playerwithin{d=8} true
+  Skills:
+  - summon{type=MiraBoss;amount=1;r=1}
+  - suicide

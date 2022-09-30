@@ -1,0 +1,37 @@
+MiraBoss:
+  Type: SPIDER
+  Display: 'Mira'
+  Health: 500
+  Damage: 10
+  Skills:
+  - skill{s=Leap} @target ~onTimer:130
+  - skill{s=WebShot} @PIR{r=15} ~onTimer:200
+  - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
+  - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
+  Drops:
+  - MiraDrops
+  BossBar:
+    Enabled: true
+    Title: 'Mira'
+    Range: 20
+    Color: RED
+    Style: SOLID
+Ent:
+  Type: IRON_GOLEM
+  Display: 'Ent'
+  Health: 1000
+  Damage: 10
+  AITargetSelectors:
+  - clear
+  - players
+  - golems
+  - wolves
+  Skills:
+  - skill{s=SlamStrike} @target ~onTimer:600
+  - skill{s=TossMove} @target ~onTimer:230
+  BossBar:
+    Enabled: true
+    Title: 'Ent'
+    Range: 20
+    Color: GREEN
+    Style: SOLID

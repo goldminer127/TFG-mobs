@@ -8,3 +8,13 @@ BabyZombie:
   - AIR HAND
   Options:
     PreventOtherDrops: true
+
+MiraTrigger:
+  Type: SILVERFISH
+  Options:
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - potion{t=INVISIBILITY;d=100000000;p=false} @self ~onSpawn
+  - skill{s=SpawnMira} @self ~onTimer:20

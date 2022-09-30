@@ -1,0 +1,8 @@
+#Spider Dungeon
+MiraDrops:
+  Drops:
+  - mmoitems{type=MATERIAL;id=HALLOWEDHIDE} 2to3 0.5
+  - mmoitems{type=MATERIAL;id=HALLOWEDEYE} 2to3 0.5
+  - mmoitems{type=MATERIAL;id=HALLOWEDSTRING} 2to3 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDMANDIBLE} 2to3 0.4
+  - mmoitems{type=MATERIAL;id=VENOMSACK} 1to3 0.2
