@@ -4,3 +4,10 @@ SpawnMira:
   Skills:
   - summon{type=MiraBoss;amount=1;r=1}
   - suicide
+
+SpawnEnt:
+  Conditions:
+  - playerwithin{d=20} true
+  Skills:
+  - summon{type=Ent;amount=1;r=1}
+  - suicide

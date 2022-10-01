@@ -7,8 +7,8 @@ MiraBoss:
     ThreatTable: true
   Skills:
   - skill{s=MiraSkillPool1} @target ~onTimer:100
-  - skill{s=MiraSkillPool2} @target ~onTimer:230
-  - skill{s=MiraSkillPool3} @target ~onTimer:470
+  - skill{s=MiraSkillPool2} @target ~onTimer:180
+  - skill{s=MiraSkillPool3} @target ~onTimer:300
   - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
   - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
   Drops:

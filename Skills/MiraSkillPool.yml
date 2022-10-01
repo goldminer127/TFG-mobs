@@ -1,23 +1,24 @@
 #When at max 3 players are fighting this mob
-MiraSkillPool1
+MiraSkillPool1:
   Conditions:
   - playersinradius{a=>0;r=24}
   Skills:
-  - randomskill{skills=Webshot,Leap}
+  - randomskill{skills=SlownessWebShot,Leap}
 
 #When 4-6 players are fighting this mob
-MiraSkillPool2
+MiraSkillPool2:
   Conditions:
   - playersinradius{a=>3;r=24}
   Skills:
   - randomskill{skills=SpawnWeakSpiderRein,SpawnClusterSpiderRein,FangPounce}
-  - skill{s=CageWebShot} @PlayersInRadius{r=24;limit=2;sort=RANDOM}
+  - skill{s=WebCage} @PlayersInRadius{r=24;limit=2;sort=RANDOM}
 
 #When 7-10 players are fighting this mob
-MiraSkillPool2
+MiraSkillPool3:
   Conditions:
   - playersinradius{a=>6;r=24}
   Skills:
   - randomskill{skills=SpawnWeakSpiderRein,SpawnClusterSpiderRein,SpawnDirectRandomTargetSpiderRein}
   - delay 60
-  - randomskill{skills=Webshot,CageWebShot,WeakPullWebShot} @PlayersInRadius{r=24;limit=7;sort=RANDOM}
+  - randomskill{skills=SlownessWebShot,WebCage} @PlayersInRadius{r=24;limit=7;sort=RANDOM}
+  - randomskill{skill=PullString;repeat=5;repeatInterval=5} @PlayersInRadius{r=24;limit=7;sort=RANDOM}

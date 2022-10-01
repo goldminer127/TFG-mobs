@@ -1,10 +1,10 @@
 #Slowness Spider
 SlownessWebShot:
   Skills:
-  - projectile{bulletType=ITEM;material=COBWEB;onHit=SlownessWebProjectile;v=36;i=1;g=0.25;syo=3}
+  - projectile{bulletType=BLOCK;material=COBWEB;onHit=SlownessWebProjectile;v=36;i=1;g=0.25;syo=3}
 SlownessWebProjectile:
   Skills:
-  - damage{a=1}
+  - damage{a=1;pkb=true;pi=true}
   - potion{type=SLOW;duration=60;level=2;p=false}
 #Leaping Spider
 Leap:
@@ -26,22 +26,17 @@ SpawnDirectRandomTargetSpiderRein:
   - summon{type=WeaverSpider;amount=2;r=5;repeat=2} @PlayersInRadius{r=24;limit=1;sort=RANDOM}
   - summon{type=CAVE_SPIDER;amount=2;r=5;repeat=2} @PlayersInRadius{r=24;limit=1;sort=RANDOM}
 
-CageWebShot:
-  Skills:
-  - projectile{bulletType=ITEM;material=COBWEB;onHit=WebCage;v=36;i=1;g=0.25;syo=3}
 WebCage:
   Skills:
-  - prison{material=COB_WEB;duration=100;breakable=true}
+  - prison{material=COBWEB;duration=100;breakable=true}
 
-WeakPullWebShot:
-  Skills:
-  - projectile{bulletType=ITEM;material=STRING;onHit=PullString;v=36;i=1;g=0.25;syo=3;repeat=8;repeatInterval=5}
 PullString:
   Skills:
+  - effect:particleline{particle=crit;amount=1;fromOrigin=true}
   - damage{a=1;pkb=true;pi=true}
   - pull{velocity=2}
 
-FangPounce
+FangPounce:
   Skills:
   - throw{velocity=15;velocityY:2} @EntitiesInLine{r=3}
   - potion{t=POISON;d=100;level=2;p=false} @EntitiesInLine{r=3}
