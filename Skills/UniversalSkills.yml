@@ -17,6 +17,7 @@ SlamStrike:
   - delay 2
   - effect:particlering{p=block_crack;a=200;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=50} @self
 
+#Should use following targetter: @PlayersInRadius{r=3;limit=1;sort=NEAREST}
 TossMove:
   Skills:
   - mountme

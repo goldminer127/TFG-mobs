@@ -2,7 +2,7 @@ WeaverSpider:
   Type: CAVE_SPIDER
   Health: 24
   Skills:
-  - skill{s=WebShot} @target ~onTimer:200
+  - skill{s=SlownessWebShot} @target ~onTimer:200
   Drops:
   - StandardSpider
 LeapingSpider:

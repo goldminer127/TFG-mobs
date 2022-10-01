@@ -1,8 +1,8 @@
 #Slowness Spider
-WebShot:
+SlownessWebShot:
   Skills:
-  - projectile{bulletType=ITEM;material=COBWEB;onHit=SlownessWeb;v=36;i=1;g=0.25;syo=3}
-SlownessWeb:
+  - projectile{bulletType=ITEM;material=COBWEB;onHit=SlownessWebProjectile;v=36;i=1;g=0.25;syo=3}
+SlownessWebProjectile:
   Skills:
   - damage{a=1}
   - potion{type=SLOW;duration=60;level=2;p=false}
@@ -10,3 +10,38 @@ SlownessWeb:
 Leap:
   Skills:
   - leap{v=400;noise=2}
+
+#Other Spider Skills
+#Spawns purposed for Mira
+SpawnClusterSpiderRein:
+  Skills:
+  - summon{type=WeaverSpider;amount=3;r=5} @self
+  - summon{type=LeapingSpider;amount=2;r=5} @self
+  - summon{type=CAVE_SPIDER;amount=3;r=5} @self
+SpawnWeakSpiderRein:
+  Skills:
+  - summon{type=CAVE_SPIDER;amount=3;r=5} @self
+SpawnDirectRandomTargetSpiderRein:
+  Skills:
+  - summon{type=WeaverSpider;amount=2;r=5;repeat=2} @PlayersInRadius{r=24;limit=1;sort=RANDOM}
+  - summon{type=CAVE_SPIDER;amount=2;r=5;repeat=2} @PlayersInRadius{r=24;limit=1;sort=RANDOM}
+
+CageWebShot:
+  Skills:
+  - projectile{bulletType=ITEM;material=COBWEB;onHit=WebCage;v=36;i=1;g=0.25;syo=3}
+WebCage:
+  Skills:
+  - prison{material=COB_WEB;duration=100;breakable=true}
+
+WeakPullWebShot:
+  Skills:
+  - projectile{bulletType=ITEM;material=STRING;onHit=PullString;v=36;i=1;g=0.25;syo=3;repeat=8;repeatInterval=5}
+PullString:
+  Skills:
+  - damage{a=1;pkb=true;pi=true}
+  - pull{velocity=2}
+
+FangPounce
+  Skills:
+  - throw{velocity=15;velocityY:2} @EntitiesInLine{r=3}
+  - potion{t=POISON;d=100;level=2;p=false} @EntitiesInLine{r=3}

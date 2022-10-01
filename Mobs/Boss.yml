@@ -1,11 +1,14 @@
 MiraBoss:
   Type: SPIDER
   Display: 'Mira'
-  Health: 500
-  Damage: 10
+  Health: 750
+  Damage: 14
+  Modules:
+    ThreatTable: true
   Skills:
-  - skill{s=Leap} @target ~onTimer:130
-  - skill{s=WebShot} @PIR{r=15} ~onTimer:200
+  - skill{s=MiraSkillPool1} @target ~onTimer:100
+  - skill{s=MiraSkillPool2} @target ~onTimer:230
+  - skill{s=MiraSkillPool3} @target ~onTimer:470
   - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
   - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
   Drops:
@@ -21,6 +24,8 @@ Ent:
   Display: 'Ent'
   Health: 1000
   Damage: 10
+  Modules:
+    ThreatTable: true
   AITargetSelectors:
   - clear
   - players
@@ -28,7 +33,7 @@ Ent:
   - wolves
   Skills:
   - skill{s=SlamStrike} @target ~onTimer:600
-  - skill{s=TossMove} @target ~onTimer:230
+  - skill{s=TossMove} @PlayersInRadius{r=5;limit=1;sort=NEAREST} ~onTimer:230
   BossBar:
     Enabled: true
     Title: 'Ent'
