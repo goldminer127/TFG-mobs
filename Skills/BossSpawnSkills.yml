@@ -16,8 +16,8 @@ SpawnMiraTriggerDelay:
 
 MiraSignal:
   Skills:
-  - signal{s=SpawnMira} @MobsNearOrigin{r=10;t=MiraTriggerDelay}
-  - delay 20
+  - signal{s=SpawnMira} MobsInRadius{r=10;t=MiraTriggerDelay}
+  - delay 40
   - suicide
 
 SpawnEnt:
@@ -38,6 +38,6 @@ SpawnEntTriggerDelay:
 
 EntSignal:
   Skills:
-  - signal{s=SpawnMira} @MobsNearOrigin{r=10;t=EntTriggerDelay}
-  - delay 20
+  - signal{s=SpawnMira} MobsInRadius{r=10;t=EntTriggerDelay}
+  - delay 40
   - suicide
