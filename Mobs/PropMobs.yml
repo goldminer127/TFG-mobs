@@ -30,6 +30,16 @@ MiraTriggerDelay:
   Skills:
   - skill{s=SpawnMiraTriggerDelay} ~onSignal:SpawnMira
 
+MiraSignalMob:
+  Type: SILVERFISH
+  Options:
+    Silent: true
+    Despawn: false
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - skill{s=MiraSignal} ~onSpawn
+
 EntTrigger:
   Type: SILVERFISH
   Options:
@@ -50,3 +60,13 @@ EntTriggerDelay:
   - clear
   Skills:
   - skill{s=SpawnEntTriggerDelay} ~onSignal:SpawnEnt
+
+EntSignalMob:
+  Type: SILVERFISH
+  Options:
+    Silent: true
+    Despawn: false
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - skill{s=EntSignal} ~onSpawn
