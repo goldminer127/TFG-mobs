@@ -13,6 +13,7 @@ MiraTrigger:
   Type: SILVERFISH
   Options:
     Silent: true
+    Despawn: false
   AIGoalSelectors:
   - clear
   Skills:
@@ -23,6 +24,7 @@ MiraTriggerDelay:
   Type: SILVERFISH
   Options:
     Silent: true
+    Despawn: false
   AIGoalSelectors:
   - clear
   Skills:
@@ -32,6 +34,7 @@ EntTrigger:
   Type: SILVERFISH
   Options:
     Silent: true
+    Despawn: false
   AIGoalSelectors:
   - clear
   Skills:
@@ -42,6 +45,7 @@ EntTriggerDelay:
   Type: SILVERFISH
   Options:
     Silent: true
+    Despawn: false
   AIGoalSelectors:
   - clear
   Skills:

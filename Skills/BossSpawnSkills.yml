@@ -12,7 +12,7 @@ SpawnMiraTrigger:
 SpawnMiraTriggerDelay:
   Skills:
   - delay 18000
-  - skill{s=SpawnMiraTrigger}
+  - skill{s=SpawnMiraTrigger} @Location{c=-1259,27,-472}
 
 SpawnEnt:
   Conditions:
@@ -28,4 +28,4 @@ SpawnEntTrigger:
 SpawnEntTriggerDelay:
   Skills:
   - delay 18000
-  - skill{s=SpawnEntTrigger}
+  - skill{s=SpawnEntTrigger} @Location{c=-473,82,-1052}
