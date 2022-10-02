@@ -38,6 +38,6 @@ SpawnEntTriggerDelay:
 
 EntSignal:
   Skills:
-  - signal{s=SpawnMira} MobsInRadius{r=10;t=EntTriggerDelay}
+  - signal{s=SpawnEnt} MobsInRadius{r=10;t=EntTriggerDelay}
   - delay 40
   - suicide
