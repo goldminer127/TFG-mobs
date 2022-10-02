@@ -1,8 +1,8 @@
 #Spider Dungeon
 StandardSpider:
   Drops:
-  - mmoitems{type=MATERIAL;id=HALLOWEDHIDE} 1to2 0.4
-  - mmoitems{type=MATERIAL;id=HALLOWEDEYE} 1to2 0.4
+  - mmoitems{type=MATERIAL;id=HALLOWEDHIDE} 1to2 0.05
+  - mmoitems{type=MATERIAL;id=HALLOWEDEYE} 1to2 0.05
   - mmoitems{type=MATERIAL;id=HALLOWEDSTRING} 1to2 0.3
   - mmoitems{type=MATERIAL;id=HALLOWEDMANDIBLE} 1to2 0.3
   - mmoitems{type=MATERIAL;id=VENOMSACK} 1 0.1

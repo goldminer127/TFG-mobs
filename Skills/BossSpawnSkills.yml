@@ -5,9 +5,27 @@ SpawnMira:
   - summon{type=MiraBoss;amount=1;r=1}
   - suicide
 
+SpawnMiraTrigger:
+  Skills:
+  - summon{type=MiraTrigger;amount=1;r=1}
+
+SpawnMiraTriggerDelay:
+  Skills:
+  - delay 18000
+  - skill{s=SpawnMiraTrigger}
+
 SpawnEnt:
   Conditions:
   - playerwithin{d=20} true
   Skills:
   - summon{type=Ent;amount=1;r=1}
   - suicide
+
+SpawnEntTrigger:
+  Skills:
+  - summon{type=EntTrigger;amount=1;r=1}
+
+SpawnEntTriggerDelay:
+  Skills:
+  - delay 18000
+  - skill{s=SpawnEntTrigger}

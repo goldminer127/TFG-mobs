@@ -2,8 +2,8 @@ SlamStrike:
   Skills:
   - leap{v=100}
   - throw{velocity=10;velocityY=5;repeat=2;repeatInterval=2} @PIR{r=50}
-  - damage{a=4} @PIR{r=50}
-  - effect:sound{s=entity.iron_golem.repair;v=100;p=0.5} @self
+  - damage{a=10} @PIR{r=50}
+  - effect:sound{s=entity.iron_golem.repair;v=2;p=0.5} @self
   - effect:sound{s=entity.generic.explode;v=2;p=1;repeat=7;repeatInterval=2} @self
   - effect:particlering{p=block_crack;a=200;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=1} @self
   - delay 2
@@ -22,7 +22,11 @@ TossMove:
   Skills:
   - mountme
   - delay 5
-  - sound{s=entity.iron_golem.repair;v=100;p=0} @self
+  - sound{s=entity.iron_golem.repair;v=2;p=0} @self
   - ejectpassenger
   - throw{velocity=20;velocityY:5}
-  - damage{a=8}
+  - damage{a=12}
+
+Gust:
+  Skills:
+  - pull{velocity=25}

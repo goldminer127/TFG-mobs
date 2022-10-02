@@ -9,8 +9,11 @@ MiraBoss:
   - skill{s=MiraSkillPool1} @target ~onTimer:100
   - skill{s=MiraSkillPool2} @target ~onTimer:180
   - skill{s=MiraSkillPool3} @target ~onTimer:300
+  - skill{s=MiraRegion} @self ~onTimer:100
   - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
   - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
+  - signal{s=SpawnMira} @mobsInRadius{r=5000;t=MiraTriggerDelay} ~onDeath
+  - signal{s=SpawnMira} @mobsInRadius{r=5000;t=MiraTriggerDelay} ~onDespawn
   Drops:
   - MiraDrops
   BossBar:
@@ -26,6 +29,8 @@ Ent:
   Damage: 10
   Modules:
     ThreatTable: true
+  DamageModifiers:
+  - PROJECTILE 0.05
   AITargetSelectors:
   - clear
   - players
@@ -33,7 +38,11 @@ Ent:
   - wolves
   Skills:
   - skill{s=SlamStrike} @target ~onTimer:600
-  - skill{s=TossMove} @PlayersInRadius{r=5;limit=1;sort=NEAREST} ~onTimer:230
+  - skill{s=TossMove} @playersInRadius{r=5;limit=1;sort=NEAREST} ~onTimer:230
+  - skill{s=Gust} @PlayersInRadius{r=5} ~onTimer:200
+  - skill{s=EntRegion} @self ~onTimer:100
+  - signal{s=SpawnEnt} @mobsInRadius{r=5000;t=EntTriggerDelay} ~onDeath
+  - signal{s=SpawnEnt} @mobsInRadius{r=5000;t=EntTriggerDelay} ~onDespawn
   BossBar:
     Enabled: true
     Title: 'Ent'

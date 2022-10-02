@@ -21,4 +21,4 @@ MiraSkillPool3:
   - randomskill{skills=SpawnWeakSpiderRein,SpawnClusterSpiderRein,SpawnDirectRandomTargetSpiderRein}
   - delay 60
   - randomskill{skills=SlownessWebShot,WebCage} @PlayersInRadius{r=24;limit=7;sort=RANDOM}
-  - randomskill{skill=PullString;repeat=5;repeatInterval=5} @PlayersInRadius{r=24;limit=7;sort=RANDOM}
+  - skill{s=PullString;repeat=5;repeatInterval=5} @PlayersInRadius{r=24;limit=7;sort=RANDOM}

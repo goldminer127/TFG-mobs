@@ -1,0 +1,11 @@
+MiraRegion:
+  TargetConditions:
+  - region{r=entfight} true
+  Skills:
+  - remove
+
+EntRegion:
+  TargetConditions:
+  - region{r=entfight} true
+  Skills:
+  - remove

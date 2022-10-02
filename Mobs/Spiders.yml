@@ -4,11 +4,9 @@ WeaverSpider:
   Skills:
   - skill{s=SlownessWebShot} @target ~onTimer:200
   Drops:
-  - StandardSpider
 LeapingSpider:
   Type: CAVE_SPIDER
   Health: 24
   Skills:
   - skill{s=Leap} @target ~onTimer:130
   Drops:
-  - StandardSpider

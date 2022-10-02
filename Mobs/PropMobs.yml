@@ -17,7 +17,16 @@ MiraTrigger:
   - clear
   Skills:
   - potion{t=INVISIBILITY;d=100000000;p=false} @self ~onSpawn
-  - skill{s=SpawnMira} @self ~onTimer:20
+  - skill{s=SpawnMira} @self ~onTimer:40
+
+MiraTriggerDelay:
+  Type: SILVERFISH
+  Options:
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - skill{s=SpawnMiraTriggerDelay} ~onSignal:SpawnMira
 
 EntTrigger:
   Type: SILVERFISH
@@ -27,4 +36,13 @@ EntTrigger:
   - clear
   Skills:
   - potion{t=INVISIBILITY;d=100000000;p=false} @self ~onSpawn
-  - skill{s=SpawnEnt} @self ~onTimer:20
+  - skill{s=SpawnEnt} @self ~onTimer:40
+
+EntTriggerDelay:
+  Type: SILVERFISH
+  Options:
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - skill{s=SpawnEntTriggerDelay} ~onSignal:SpawnEnt
