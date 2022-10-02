@@ -28,7 +28,7 @@ MiraTriggerDelay:
   AIGoalSelectors:
   - clear
   Skills:
-  - skill{s=SpawnMiraTriggerDelay} ~onSignal:SpawnMira
+  - skill{s=SpawnMiraTriggerDelay} ~onSignal:SPAWNMIRA
 
 MiraSignalMob:
   Type: SILVERFISH
@@ -59,7 +59,7 @@ EntTriggerDelay:
   AIGoalSelectors:
   - clear
   Skills:
-  - skill{s=SpawnEntTriggerDelay} ~onSignal:SpawnEnt
+  - skill{s=SpawnEntTriggerDelay} ~onSignal:SPAWNENT
 
 EntSignalMob:
   Type: SILVERFISH
