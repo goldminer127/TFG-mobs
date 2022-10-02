@@ -43,6 +43,8 @@ Ent:
   - skill{s=EntRegion} @self ~onTimer:100
   - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDeath
   - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDespawn
+  Drops:
+  - EntDrops
   BossBar:
     Enabled: true
     Title: 'Ent'

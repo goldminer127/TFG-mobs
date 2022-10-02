@@ -7,7 +7,7 @@ MiraDrops:
   - mmoitems{type=MATERIAL;id=HALLOWEDMANDIBLE} 2to3 0.4
   - mmoitems{type=MATERIAL;id=VENOMSACK} 1to3 0.2
 
-EntLoot:
+EntDrops:
   Drops:
   - mmoitems{type=MATERIAL;id=ENTBARK} 1to2 0.4
   - mmoitems{type=MATERIAL;id=ENTLEAF} 1to2 0.4
