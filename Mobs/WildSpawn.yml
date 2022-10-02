@@ -102,11 +102,16 @@ FallenViking:
 
 #PASSIVE MOBS
 #Rabbit Based
-MushroomFriend:
+JungleShroom:
   Type: RABBIT
   Options:
     FollowRange: 50
   AIGoalSelectors:
+  - clear
   - gotoowner 5
+  - randomstroll
+  - randomlookaround
+  - lookatplayers
+  - eatgrass
   Skills:
   - skill{s=TameWithGrass} @trigger ~onInteract
