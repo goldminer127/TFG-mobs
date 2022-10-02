@@ -1,11 +1,13 @@
 MiraRegion:
   TargetConditions:
-  - region{r=entfight} true
+  - region{r=spidernest4} false
   Skills:
   - remove
+  - signal{s=SpawnMira} @mobsInRadius{r=5000;t=MiraTriggerDelay}
 
 EntRegion:
   TargetConditions:
-  - region{r=entfight} true
+  - region{r=entfight} false
   Skills:
   - remove
+  - signal{s=SpawnEnt} @mobsInRadius{r=5000;t=EntTriggerDelay}
