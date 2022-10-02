@@ -3,11 +3,11 @@ MiraRegion:
   - region{r=spidernest4} false
   Skills:
   - remove
-  - skill{s=MiraSignal} @location{c=213,58,344}
+  - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344}
 
 EntRegion:
   TargetConditions:
   - region{r=entfight} false
   Skills:
   - remove
-  - skill{s=EntSignal} @location{c=213,58,344}
+  - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344}
