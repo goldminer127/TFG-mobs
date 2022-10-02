@@ -9,6 +9,6 @@ MiraDrops:
 
 EntDrops:
   Drops:
-  - mmoitems{type=MATERIAL;id=ENTBARK} 1to2 0.4
-  - mmoitems{type=MATERIAL;id=ENTLEAF} 1to2 0.4
+  - mmoitems{type=MATERIAL;id=ENTBARK} 1to2 0.3
+  - mmoitems{type=MATERIAL;id=ENTLEAVES} 1to2 0.3
   - mmoitems{type=MATERIAL;id=ENTSOUL} 1to2 0.1

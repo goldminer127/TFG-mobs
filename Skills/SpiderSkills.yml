@@ -1,9 +1,7 @@
 #Slowness Spider
 SlownessWebShot:
   Skills:
-  - projectile{bulletType=BLOCK;material=COBWEB;onHit=SlownessWebProjectile;v=36;i=1;g=0.25;syo=3}
-SlownessWebProjectile:
-  Skills:
+  - effect:particleline{particle=crit;amount=10;fromOrigin=true}
   - damage{a=1;pkb=true;pi=true}
   - potion{type=SLOW;duration=60;level=2;p=false}
 #Leaping Spider
@@ -32,7 +30,7 @@ WebCage:
 
 PullString:
   Skills:
-  - effect:particleline{particle=crit;amount=1;fromOrigin=true}
+  - effect:particleline{particle=crit;amount=20;fromOrigin=true}
   - damage{a=1;pkb=true;pi=true}
   - pull{velocity=2}
 

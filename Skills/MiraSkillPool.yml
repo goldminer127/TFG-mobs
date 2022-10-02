@@ -3,7 +3,7 @@ MiraSkillPool1:
   Conditions:
   - playersinradius{a=>0;r=24}
   Skills:
-  - randomskill{skills=SlownessWebShot,Leap}
+  - randomskill{skills=SlownessWebShot,Leap,SpawnWeakSpiderRein}
 
 #When 4-6 players are fighting this mob
 MiraSkillPool2:
