@@ -12,8 +12,8 @@ MiraBoss:
   - skill{s=MiraRegion} @self ~onTimer:100
   - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
   - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
-  - signal{s=SpawnMira} @location{c=213,58,344} @mobsInRadius{r=10;t=MiraTriggerDelay} ~onDeath
-  - signal{s=SpawnMira} @location{c=213,58,344} @mobsInRadius{r=10;t=MiraTriggerDelay} ~onDespawn
+  - skill{s=MiraSignal} @location{c=213,58,344} ~onDeath
+  - skill{s=MiraSignal} @location{c=213,58,344} ~onDespawn
   Drops:
   - MiraDrops
   BossBar:
@@ -41,8 +41,8 @@ Ent:
   - skill{s=TossMove} @playersInRadius{r=5;limit=1;sort=NEAREST} ~onTimer:230
   - skill{s=Gust} @PlayersInRadius{r=5} ~onTimer:200
   - skill{s=EntRegion} @self ~onTimer:100
-  - signal{s=SpawnEnt} @location{c=213,58,344} @mobsInRadius{r=10;t=EntTriggerDelay} ~onDeath
-  - signal{s=SpawnEnt} @location{c=213,58,344} @mobsInRadius{r=10;t=EntTriggerDelay} ~onDespawn
+  - skill{s=EntSignal} @location{c=213,58,344} ~onDeath
+  - skill{s=EntSignal} @location{c=213,58,344} ~onDespawn
   BossBar:
     Enabled: true
     Title: 'Ent'

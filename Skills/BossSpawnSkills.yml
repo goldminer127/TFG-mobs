@@ -14,6 +14,10 @@ SpawnMiraTriggerDelay:
   - delay 18000
   - skill{s=SpawnMiraTrigger} @Location{c=-1259,27,-472}
 
+MiraSignal:
+  Skills:
+  - signal{s=SpawnMira} @MobsNearOrigin{r=10;t=MiraTriggerDelay}
+
 SpawnEnt:
   Conditions:
   - playerwithin{d=20} true
@@ -29,3 +33,7 @@ SpawnEntTriggerDelay:
   Skills:
   - delay 18000
   - skill{s=SpawnEntTrigger} @Location{c=-473,82,-1052}
+
+EntSignal:
+  Skills:
+  - signal{s=SpawnMira} @MobsNearOrigin{r=10;t=EntTriggerDelay}
