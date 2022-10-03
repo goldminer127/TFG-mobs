@@ -1,6 +1,5 @@
 RandomBuddingZombie:
  Conditions:
- - blocktype{type=water} false
  - inblock{b=WATER,LAVA} false
  - outside{} true
   MobType: BuddingZombie
@@ -11,7 +10,6 @@ RandomBuddingZombie:
 
 RandomLeaper:
  Conditions:
- - blocktype{type=water} false
  - inblock{b=WATER,LAVA} false
  - outside{} true
   MobType: Leaper
@@ -22,7 +20,6 @@ RandomLeaper:
 
 RandomFallenViking:
  Conditions:
- - blocktype{type=water} false
  - inblock{b=WATER,LAVA} false
  - outside{} true
   MobType: FallenViking
@@ -33,7 +30,6 @@ RandomFallenViking:
 
 RandomMeleeSkeleton:
  Conditions:
- - blocktype{type=water} false
  - inblock{b=WATER,LAVA} false
  - outside{} true
   MobType: MeleeSkeleton
