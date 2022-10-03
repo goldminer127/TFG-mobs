@@ -1,0 +1,28 @@
+RandomBuddingZombie:
+  MobType: Budding Zombie
+  Worlds: world
+  Chance: 0.15
+  Priority: 1
+  Action: REPLACE
+
+RandomLeaper:
+  MobType: Leaper
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: REPLACE
+
+RandomFallenViking:
+  MobType: Fallen Viking
+  Worlds: world
+  Chance: 0.10
+  Priority: 2
+  Action: REPLACE
+
+RandomMeleeSkeleton:
+  MobType: Melee Skeleton
+  Worlds: world
+  Chance: 0.10
+  Priority: 3
+  Action: REPLACE
+
