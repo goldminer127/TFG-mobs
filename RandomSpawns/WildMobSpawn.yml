@@ -1,28 +1,44 @@
 RandomBuddingZombie:
+ Conditions:
+ - blocktype{type=water} false
+ - inblock{b=WATER,LAVA} false
+ - outside{} true
   MobType: BuddingZombie
   Worlds: world
-  Chance: 0.15
+  Chance: 0.025
   Priority: 1
   Action: REPLACE
 
 RandomLeaper:
+ Conditions:
+ - blocktype{type=water} false
+ - inblock{b=WATER,LAVA} false
+ - outside{} true
   MobType: Leaper
   Worlds: world
-  Chance: 0.05
+  Chance: 0.01
   Priority: 1
   Action: REPLACE
 
 RandomFallenViking:
+ Conditions:
+ - blocktype{type=water} false
+ - inblock{b=WATER,LAVA} false
+ - outside{} true
   MobType: FallenViking
   Worlds: world
-  Chance: 0.10
+  Chance: 0.02
   Priority: 2
   Action: REPLACE
 
 RandomMeleeSkeleton:
+ Conditions:
+ - blocktype{type=water} false
+ - inblock{b=WATER,LAVA} false
+ - outside{} true
   MobType: MeleeSkeleton
   Worlds: world
-  Chance: 0.10
+  Chance: 0.015
   Priority: 3
   Action: REPLACE
 
