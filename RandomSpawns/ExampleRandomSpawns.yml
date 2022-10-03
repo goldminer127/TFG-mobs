@@ -9,7 +9,7 @@
 RandomSkeletonKing:
   MobType: SkeletonKing
   Worlds: world
-  Chance: 0.001
+  Chance: 0
   Priority: 1
   Action: REPLACE
   Conditions:
@@ -22,6 +22,6 @@ RandomSkeletonKing:
 RandomSkeletalKnight:
   MobType: SkeletalKnight
   Worlds: world
-  Chance: 0.008
+  Chance: 0
   Priority: 1
   Action: REPLACE
