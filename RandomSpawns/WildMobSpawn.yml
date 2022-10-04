@@ -1,7 +1,7 @@
 RandomBuddingZombie:
   MobType: BuddingZombie
   Worlds: world
-  Chance: 0.03
+  Chance: 0.04
   Priority: 4
   Action: REPLACE
   Conditions:
@@ -11,7 +11,7 @@ RandomBuddingZombie:
 RandomLeaper:
   MobType: Leaper
   Worlds: world
-  Chance: 0.02
+  Chance: 0.04
   Priority: 2
   Action: REPLACE
   Conditions:
@@ -31,7 +31,7 @@ RandomFallenViking:
 RandomMeleeSkeleton:
   MobType: MeleeSkeleton
   Worlds: world
-  Chance: 0.015
+  Chance: 0.02
   Priority: 3
   Action: REPLACE
   Conditions:
@@ -41,7 +41,7 @@ RandomMeleeSkeleton:
 RandomAngrySkeleton:
   MobType: AngrySkeleton
   Worlds: world
-  Chance: 0.03
+  Chance: 0.015
   Priority: 2
   Action: REPLACE
   Conditions:

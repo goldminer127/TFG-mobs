@@ -108,7 +108,8 @@ VengfulSoul:
     MovementSpeed: 0.4
     PreventOtherDrops: true
   Skills:
-  - skill{s=StickLevatationCombo} @target ~onTimer:300
+  - skill{s=StickThrow} @target ~onTimer:200
+  - skill{s=LevetationShot} @target ~onTimer:500
   Drops:
   - STICK 1 1
   

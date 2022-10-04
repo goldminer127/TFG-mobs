@@ -31,16 +31,11 @@ Gust:
   Skills:
   - pull{velocity=50}
 
-StickLevatationCombo:
-  Skills:
-  - skill{s=LevetationShot}
-  - delay 180
-  - skill{s=StickThrow}
 LevetationShot:
   Skills:
   - effect:particleline{particle=snowballpoof;amount=10;fromOrigin=true}
   - damage{a=1;pkb=true;pi=true}
-  - potion{type=LEVITATION;duration=200;level=1;p=false}
+  - potion{type=LEVITATION;duration=100;level=1;p=false}
 StickThrow:
   Skills:
   - projectile{bulletType=ITEM;material=STICK;onHit=StickHit;v=20;i=1;hR=1;vR=1;hnp=true;g=0.1}
