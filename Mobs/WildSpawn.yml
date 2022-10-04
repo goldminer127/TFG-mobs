@@ -98,7 +98,7 @@ AngrySkeleton:
   - STICK 1 1
 VengfulSoul:
   Type: VEX
-  Health: 100
+  Health: 80
   Damage: 12
   Modules:
     ThreatTable: true
