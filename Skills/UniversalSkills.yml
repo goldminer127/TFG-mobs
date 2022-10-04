@@ -40,4 +40,4 @@ GrabShot:
   Skills:
   - effect:particleline{particle=crit;amount=10;fromOrigin=true}
   - damage{a=8;pkb=true;pi=true}
-  - pull{velocity=1}
+  - pull{velocity=3}
