@@ -98,8 +98,8 @@ AngrySkeleton:
   - STICK 1 1
 VengfulSoul:
   Type: VEX
-  Health: 50
-  Damage: 12
+  Health: 35
+  Damage: 10
   Modules:
     ThreatTable: true
   Equipment:
@@ -108,7 +108,7 @@ VengfulSoul:
     MovementSpeed: 0.4
     PreventOtherDrops: true
   Skills:
-  - randomskill{skills=GrabShot,LevetationShot,GrabShot} @target ~onTimer:300
+  - randomskill{skills=GrabShot,LevetationShot,GrabShot} @target ~onTimer:220
   Drops:
   - STICK 1 1
   
