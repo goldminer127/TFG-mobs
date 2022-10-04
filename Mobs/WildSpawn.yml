@@ -102,11 +102,6 @@ VengfulSoul:
     ThreatTable: true
   Equipment:
   - STICK HAND
-  AIGoalSelectors:
-  - clear
-  - randomlookaround
-  - randomstroll
-  - meleeattack
   Options:
     MovementSpeed: 0.4
     PreventOtherDrops: true
