@@ -1,8 +1,8 @@
 RandomBuddingZombie:
   MobType: BuddingZombie
   Worlds: world
-  Chance: 0.025
-  Priority: 1
+  Chance: 0.03
+  Priority: 4
   Action: REPLACE
   Conditions:
   - inblock{b=WATER,LAVA} false
@@ -11,8 +11,8 @@ RandomBuddingZombie:
 RandomLeaper:
   MobType: Leaper
   Worlds: world
-  Chance: 0.01
-  Priority: 1
+  Chance: 0.02
+  Priority: 2
   Action: REPLACE
   Conditions:
   - inblock{b=WATER,LAVA} false
@@ -21,8 +21,8 @@ RandomLeaper:
 RandomFallenViking:
   MobType: FallenViking
   Worlds: world
-  Chance: 0.02
-  Priority: 2
+  Chance: 0.025
+  Priority: 3
   Action: REPLACE
   Conditions:
   - inblock{b=WATER,LAVA} false
