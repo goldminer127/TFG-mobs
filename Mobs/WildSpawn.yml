@@ -62,6 +62,8 @@ PetrifiedZombie:
 MeleeSkeleton:
   Type: SKELETON
   Damage: 3.5
+  Options:
+    PreventOtherDrops: true
   Equipment:
   - AIR HAND
   AIGoalSelectors:
@@ -81,6 +83,8 @@ Leaper:
   Type: Creeper
   Modules:
     ThreatTable: true
+  Options:
+    PreventOtherDrops: true
   Skills:
   - skill{s=LeaperLeap} @target ~onEnterCombat
   Drops:
@@ -91,6 +95,8 @@ Leaper:
 FallenViking:
   Health: 22
   Type: WITHER_SKELETON
+  Options:
+    PreventOtherDrops: true
   Equipment:
   - CARVED_PUMPKIN HEAD
   - IRON_AXE HAND
