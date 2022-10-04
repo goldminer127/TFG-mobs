@@ -38,7 +38,7 @@ LevetationShot:
   - potion{type=LEVITATION;duration=100;level=1;p=false}
 StickThrow:
   Skills:
-  - projectile{bulletType=ITEM;material=STICK;onHit=StickHit;v=20;i=1;hR=1;vR=1;hnp=true;g=0.1}
+  - projectile{bulletType=ITEM;material=STICK;hnp=true;oH=StickHit;i=1;v=30;g=0.25}
 StickHit:
   Skills:
   - damage{a=10}
