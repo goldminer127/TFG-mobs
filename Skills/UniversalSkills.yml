@@ -36,9 +36,8 @@ LevetationShot:
   - effect:particleline{particle=snowballpoof;amount=10;fromOrigin=true}
   - damage{a=1;pkb=true;pi=true}
   - potion{type=LEVITATION;duration=100;level=1;p=false}
-StickThrow:
+GrabShot:
   Skills:
-  - projectile{bulletType=ITEM;material=STICK;hnp=true;oH=StickHit;i=1;v=30;g=0.25}
-StickHit:
-  Skills:
-  - damage{a=10}
+  - effect:particleline{particle=crit;amount=10;fromOrigin=true}
+  - damage{a=10;pkb=true;pi=true}
+  - pull{velocity=10}
