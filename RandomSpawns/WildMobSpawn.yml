@@ -38,3 +38,12 @@ RandomMeleeSkeleton:
   - inblock{b=WATER,LAVA} false
   - outside{} true
 
+RandomAngrySkeleton:
+  MobType: AngrySkeleton
+  Worlds: world
+  Chance: 0.03
+  Priority: 2
+  Action: REPLACE
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - outside{} true
