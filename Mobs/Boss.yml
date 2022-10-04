@@ -1,7 +1,7 @@
 MiraBoss:
   Type: SPIDER
   Display: 'Mira'
-  Health: 750
+  Health: 800
   Damage: 14
   Modules:
     ThreatTable: true

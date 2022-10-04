@@ -3,7 +3,7 @@ SlownessWebShot:
   Skills:
   - effect:particleline{particle=crit;amount=10;fromOrigin=true}
   - damage{a=1;pkb=true;pi=true}
-  - potion{type=SLOW;duration=60;level=2;p=false}
+  - potion{type=SLOW;duration=100;level=3;p=false}
 #Leaping Spider
 Leap:
   Skills:
@@ -37,4 +37,11 @@ PullString:
 FangPounce:
   Skills:
   - throw{velocity=15;velocityY:2} @EntitiesInLine{r=3}
-  - potion{t=POISON;d=100;level=2;p=false} @EntitiesInLine{r=3}
+  - potion{t=POISON;d=100;level=3;p=false} @EntitiesInLine{r=3}
+
+WebStuck:
+  Skills:
+  - skill{s=Leap}
+  - delay 5
+  - stun{d=60;f=true}
+  - potion{type=BLINDNESS;duration=100;level=1;p=false}
