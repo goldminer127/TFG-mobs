@@ -98,7 +98,7 @@ AngrySkeleton:
   - STICK 1 1
 VengfulSoul:
   Type: VEX
-  Health: 80
+  Health: 50
   Damage: 12
   Modules:
     ThreatTable: true
@@ -107,6 +107,8 @@ VengfulSoul:
   Options:
     MovementSpeed: 0.4
     PreventOtherDrops: true
+  Skills:
+  - skill{s=StickLevatationCombo} @target ~onTimer:300
   Drops:
   - STICK 1 1
   
