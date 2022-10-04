@@ -88,8 +88,8 @@ AngrySkeleton:
     MovementSpeed: 0.3
     PreventOtherDrops: true
   Skills:
-  - summon{type=VengfulSoul;amount=1;yu=true;r=50} @trigger ~onDeath
-  - sound{s=entity.vex.ambient;p=0.6} @trigger ~onDeath
+  - summon{type=VengfulSoul;amount=1;yu=true;r=50} @target ~onDeath
+  - sound{s=entity.vex.ambient;p=0.6} @target ~onDeath
   Drops:
   - BONE 1-3 0.5
   - STICK 1 1
