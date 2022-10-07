@@ -5,7 +5,6 @@ WeaverSpider:
     PreventOtherDrops: true
   Skills:
   - skill{s=SlownessWebShot} @target ~onTimer:200
-  Drops:
 LeapingSpider:
   Type: CAVE_SPIDER
   Health: 24
@@ -13,4 +12,3 @@ LeapingSpider:
     PreventOtherDrops: true
   Skills:
   - skill{s=Leap} @target ~onTimer:130
-  Drops:
