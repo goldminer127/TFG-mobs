@@ -50,3 +50,16 @@ EntSignalMob:
   - clear
   Skills:
   - skill{s=SpawnEntTriggerDelay} ~onSpawn
+
+ReplaceArmorMob:
+  Type: SILVERFISH
+  Options:
+    Silent: true
+    Despawn: false
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - skill{s=ReplaceHead} @PlayersInRadius{r=10000;limit=1;sort=RANDOM} ~onTimer:1
+  - skill{s=ReplaceChest} @PlayersInRadius{r=10000;limit=1;sort=RANDOM} ~onTimer:1
+  - skill{s=Replacelegs} @PlayersInRadius{r=10000;limit=1;sort=RANDOM} ~onTimer:1
+  - skill{s=Replacefeet} @PlayersInRadius{r=10000;limit=1;sort=RANDOM} ~onTimer:1
