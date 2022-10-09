@@ -1,24 +1,24 @@
 ReplaceHead:
-  TargetConditions:
+  Conditions:
   - score{o=replacehead;v=1} true
   Skills:
-  - command{c="mmoitems:mi give ARMOR STEEL_HELMET <target.uuid> 1"}
-  - command{c="minecraft:scoreboard players reset <target.uuid> replacehead}
+  - command{c="mmoitems:mi give ARMOR STEEL_HELMET <target.uuid> 1";op=true;rt=true}
+  - command{c="minecraft:scoreboard players reset <target.uuid> replacehead";op=true;rt=true}
 ReplaceChest:
-  TargetConditions:
+  Conditions:
   - score{o=replacechest;v=1} true
   Skills:
-  - command{c="mmoitems:mi give ARMOR STEEL_CHESTPLATE <target.uuid> 1"}
-  - command{c="minecraft:scoreboard players reset <target.uuid> replacechest}
+  - command{c="mmoitems:mi give ARMOR STEEL_CHESTPLATE <target.uuid> 1";op=true;rt=true}
+  - command{c="minecraft:scoreboard players reset <target.uuid> replacechest";op=true;rt=true}
 Replacelegs:
-  TargetConditions:
+  Conditions:
   - score{o=replaceleggings;v=1} true
   Skills:
-  - command{c="mmoitems:mi give ARMOR STEEL_LEGGINGS <target.uuid> 1"}
-  - command{c="minecraft:scoreboard players reset <target.uuid> replaceleggings}
+  - command{c="mmoitems:mi give ARMOR STEEL_LEGGINGS <target.uuid> 1";op=true;rt=true}
+  - command{c="minecraft:scoreboard players reset <target.uuid> replaceleggings";op=true;rt=true}
 Replacefeet:
-  TargetConditions:
+  Conditions:
   - score{o=replacefeet;v=1} true
   Skills:
-  - command{c="mmoitems:mi give ARMOR STEEL_BOOTS <target.uuid> 1"}
-  - command{c="minecraft:scoreboard players reset <target.uuid> replacefeet}
+  - command{c="mmoitems:mi give ARMOR STEEL_BOOTS <target.uuid> 1";op=true;rt=true}
+  - command{c="minecraft:scoreboard players reset <target.uuid> replacefeet";op=true;rt=true}
