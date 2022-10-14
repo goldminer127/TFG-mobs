@@ -1,0 +1,90 @@
+MiraBoss:
+  Type: SPIDER
+  Display: 'Mira'
+  Health: 800
+  Damage: 14
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=MiraSkillPool1} @target ~onTimer:100
+  - skill{s=MiraSkillPool2} @target ~onTimer:180
+  - skill{s=MiraSkillPool3} @target ~onTimer:300
+  - skill{s=MiraRegion} @self ~onTimer:100
+  - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
+  - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
+  - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDeath
+  - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDespawn
+  Drops:
+  - MiraDrops
+  BossBar:
+    Enabled: true
+    Title: 'Mira'
+    Range: 20
+    Color: RED
+    Style: SOLID
+Ent:
+  Type: IRON_GOLEM
+  Display: 'Ent'
+  Health: 1000
+  Damage: 10
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - PROJECTILE 0.05
+  AITargetSelectors:
+  - clear
+  - players
+  - golems
+  - wolves
+  Skills:
+  - skill{s=SlamStrike} @target ~onTimer:600
+  - skill{s=TossMove} @playersInRadius{r=5;limit=1;sort=NEAREST} ~onTimer:230
+  - skill{s=Gust} @PlayersInRadius{r=50} ~onTimer:200
+  - skill{s=EntRegion} @self ~onTimer:100
+  - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDeath
+  - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDespawn
+  Drops:
+  - EntDrops
+  BossBar:
+    Enabled: true
+    Title: 'Ent'
+    Range: 20
+    Color: GREEN
+    Style: SOLID
+NethersCulling:
+  Type: PIGLIN_BRUTE
+  Display: 'Varus The Difiant'
+  Health: 2000
+  Damage: 14
+  DamageModifiers:
+  - PROJECTILE 0.05
+  Skills:
+  - skill{s=SlamStrike} @target ~onTimer:350
+  - skill{s=Gust} @PlayersInRadius{r=50} ~onTimer:200
+  - skill{s=Leap} @target ~onTimer:150
+  - summon{type=FallenViking;amount=2;r=2} @self ~onTimer:200
+  BossBar:
+    Enabled: true
+    Title: 'Varus The Difiant'
+    Range: 20
+    Color: RED
+    Style: SOLID
+Dracula:
+  Type: VINDICATOR
+  Display: 'Dracula'
+  Health: 2000
+  Damage: 16
+  Options:
+    PreventOtherDrops: true
+  DamageModifiers:
+  - PROJECTILE 0.05
+  Skills:
+  - skill{s=Gust} @PlayersInRadius{r=50} ~onTimer:200
+  - skill{s=Leap} @target ~onTimer:150
+  - summon{type=VampireBat;amount=4;r=2} @self ~onTimer:200
+  BossBar:
+    Enabled: true
+    Title: 'Dracula'
+    Range: 20
+    Color: RED
+    Style: SOLID
