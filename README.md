@@ -1,5 +1,6 @@
-# Updates 9/9
-New wild mobs were added. Natural spawn has not been implemented, thus will not spawn yet in a world. Testing is required for balancing. Natural zombies will now spawn as Zombie faction, this is for Petrifying Zombies to target them. 
+# Version ALPHA
+# Updated 10/28
+Fixes to spawn mechanic and added new skills to bosses. New wild mobs added. Warning: boss triggers can bug out with server resets and can either stop or cause multiple bosses to spawn on trigger.
 
 ## Spiders
 ### Weaver Spider
@@ -64,3 +65,17 @@ Notes:
 Abilities:
 * Knock enemies back when melee attacked
 * Reduced knockback
+
+## Boss Mobs
+### Mira
+Type: Spider\
+Damage: 10
+Notes:
+* Mira has 3 separate skill pools. The pools will stack on top of each other as more players fight this boss. This is to scale the difficulty depending on how many players are fighting this boss at the same time. This boss has been tested for up to 10 player fights.
+* Mira is currently set to be an easy boss, this is being reconsidered due to changing skill pools
+
+### Ent
+Type: Iron Golem\
+Damage: 10
+Notes:
+* This is set to be an easy boss, skills will be defined later
