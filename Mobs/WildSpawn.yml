@@ -27,7 +27,7 @@ PetrifyingZombie:
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
-  - skill{s=FullPetrify} ~onTimer:1000
+  - skill{s=TryFullPetrify} ~onTimer:1000
   - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
 PetrifyingZombieInfected:
   Type: ZOMBIE
@@ -43,11 +43,11 @@ PetrifyingZombieInfected:
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
-  - skill{s=FullPetrify} ~onTimer:1000
+  - skill{s=TryFullPetrify} ~onTimer:1000
 PetrifiedZombie:
   Type: ZOMBIE
-  Health: 30
-  Damage: 10
+  Health: 40
+  Damage: 25
   Faction: StoneInfected
   Equipment:
   - StoneHead HEAD

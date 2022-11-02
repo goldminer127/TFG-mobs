@@ -9,6 +9,9 @@ LeaperLeap:
   - effect:particlesphere{particle=smoke;amount=20;radius=1;vs=1;s=0;repeat=2;repeatInterval=2} @self
   - delay 5
   - leap{velocity=500;delay=20}
+TryFullPetrify:
+  Skills:
+  - skill{s=FullPetrify} @self 0.05
 InfectPetrify:
   TargetConditions:
   - entitytype{t=ZOMBIE} true
