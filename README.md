@@ -2,7 +2,7 @@
 # Updated 10/28
 Fixes to spawn mechanic and added new skills to bosses. New wild mobs added. Warning: boss triggers can bug out with server resets and can either stop or cause multiple bosses to spawn on trigger.
 
-These mobs are used by the TFG Minecraft Server.\
+These mobs are used by the TFG Minecraft Server.
 # Quick Navigation
 Mobs
 * [Spiders](#spiders)
