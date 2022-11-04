@@ -35,7 +35,7 @@ Skills
 
 
 # Mobs
-Note: Range is measured in blocks. Damage and Health are in hitpoints (1 player heart = 2 hitpoints). Normal label indicated vanilla stats for whatever category it is placed under. Cooldown times are in seconds. Cooldowns are determined by mob unless stated otherwise.
+Note: Range is measured in blocks. Damage and Health are in hitpoints (1 player heart = 2 hitpoints). Normal labels indicate vanilla stats for whatever category it is placed under. Cooldown times are in seconds. Cooldowns are determined by mob unless stated otherwise.
 ## Spiders
 ### Weaver Spider
 Type: Cave Spider\
