@@ -156,7 +156,7 @@ Modifiers:
 ### Mira
 Type: Spider\
 Health: 800\
-Base Damage: 14
+Base Damage: 14\
 Abilities: (Pools detect players within a 24 block radius range)
 * Pool 1 (1-4 player fights) | Cooldown: 5 | Duration: 0.25 (includes delays)
   * Random Pick(33.3% Slowness Web Shot, 33.3% Spider Leap, 33.3% Spawn Spider Reinforcements Level 1)
