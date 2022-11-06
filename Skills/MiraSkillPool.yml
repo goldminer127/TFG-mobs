@@ -3,7 +3,7 @@ MiraSkillPool1:
   Conditions:
   - playersinradius{a=>0;r=24}
   Skills:
-  - randomskill{skills=SlownessWebShot,Leap,SpawnWeakSpiderRein}
+  - randomskill{skills=SlownessWebShot,SpiderLeap,SpawnWeakSpiderRein}
   - delay 5
   - randomskill{skills=SlownessWebShot,WebStuck} @PlayersInRadius{r=24;limit=2;sort=RANDOM}
 

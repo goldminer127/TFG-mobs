@@ -15,7 +15,7 @@ BuddingZombie:
   - exp 10 0.5
 PetrifyingZombie:
   Type: ZOMBIE
-  Damage: 4.5
+  Damage: 10
   Faction: StoneInfected
   Equipment:
   - CobbleHead HEAD
@@ -27,11 +27,11 @@ PetrifyingZombie:
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
-  - skill{s=TryFullPetrify} ~onTimer:1000
+  - skill{s=TryFullPetrify} ~onTimer:200
   - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
 PetrifyingZombieInfected:
   Type: ZOMBIE
-  Damage: 4.5
+  Damage: 10
   Faction: StoneInfected
   Equipment:
   - CobbleHead HEAD
@@ -43,7 +43,7 @@ PetrifyingZombieInfected:
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
-  - skill{s=TryFullPetrify} ~onTimer:1000
+  - skill{s=TryFullPetrify} ~onTimer:200
 PetrifiedZombie:
   Type: ZOMBIE
   Health: 40

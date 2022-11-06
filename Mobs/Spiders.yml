@@ -11,4 +11,4 @@ LeapingSpider:
   Options:
     PreventOtherDrops: true
   Skills:
-  - skill{s=Leap} @target ~onTimer:130
+  - skill{s=SpiderLeap} @target ~onTimer:130

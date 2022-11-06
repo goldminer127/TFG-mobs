@@ -9,9 +9,9 @@ StoneHead:
   Id: STONE
   Attributes:
     Head:
-      Armor: 10
-      KnockbackResistance: 99%
-      MovementSpeed: -0.1
+      Armor: 20
+      KnockbackResistance: 200%
+      MovementSpeed: -0.15
 PetrifiedChest:
   Id: LEATHER_CHESTPLATE
   Options:
