@@ -27,6 +27,7 @@ PetrifyingZombie:
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
+  - skill{s=PlayerInfect} @target ~onAttack 0.5
   - skill{s=TryFullPetrify} ~onTimer:200
   - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
 PetrifyingZombieInfected:
@@ -43,6 +44,7 @@ PetrifyingZombieInfected:
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
+  - skill{s=PlayerInfect} @target ~onAttack 0.5
   - skill{s=TryFullPetrify} ~onTimer:200
 PetrifiedZombie:
   Type: ZOMBIE
@@ -57,6 +59,7 @@ PetrifiedZombie:
   - AIR HAND
   Skills:
   - skill{s=HardResistance} @target ~onDamaged
+  - skill{s=StonePrison} @target ~onAttack 0.25
 
 #Skeleton Based
 MeleeSkeleton:
