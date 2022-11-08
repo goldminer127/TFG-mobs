@@ -17,6 +17,8 @@ PetrifyingZombie:
   Type: ZOMBIE
   Damage: 10
   Faction: StoneInfected
+  Options:
+    PreventTransformation: true
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -34,6 +36,8 @@ PetrifyingZombieInfected:
   Type: ZOMBIE
   Damage: 10
   Faction: StoneInfected
+  Options:
+    PreventTransformation: true
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -51,6 +55,10 @@ PetrifiedZombie:
   Health: 40
   Damage: 25
   Faction: StoneInfected
+  Options:
+    PreventTransformation: true
+  Modules:
+    ThreatTable: true
   Equipment:
   - StoneHead HEAD
   - PetrifiedChest CHEST
@@ -58,7 +66,7 @@ PetrifiedZombie:
   - PetrifiedFeet FEET
   - AIR HAND
   Skills:
-  - skill{s=HardResistance} @target ~onDamaged
+  - skill{s=HardResistance} @trigger ~onDamaged
   - skill{s=StonePrison} @target ~onAttack 0.25
 
 #Skeleton Based
