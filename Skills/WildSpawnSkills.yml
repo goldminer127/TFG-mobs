@@ -27,6 +27,16 @@ FullPetrify:
 HardResistance:
   TargetConditions:
   - holding{m=BOW} false
+  - holding{m=TRIDENT} false
+  - damagecause{cause=FIRE} false
   Skills:
   - throw{velocity=3;velocityY=1;repeat=2;repeatInterval=2}
   - sound{s=block.anvil.land;v=0.1;p=2}
+PlayerInfect:
+  Skills:
+  - potion{type=SLOW;duration=200;level=4;p=false}
+  - potion{type=BLINDNESS;duration=200;level=1;p=false}
+  - potion{type=JUMP_BOOST;duration=200;level=255;p=false}
+StonePrison:
+  Skills:
+  - prison{material=STONE;duration=100;breakable=true}
