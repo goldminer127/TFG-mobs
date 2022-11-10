@@ -43,7 +43,7 @@ PetrifyingZombieInfected:
   Options:
     PreventTransformation: true
     ReinforcementsChance: 75%
-    MovementSpeed: 0.1
+    MovementSpeed: 0.3
   DamageModifiers:
   - PROJECTILE 0.05
   Equipment:
