@@ -19,6 +19,9 @@ PetrifyingZombie:
   Faction: StoneInfected
   Options:
     PreventTransformation: true
+    ReinforcementsChance: 75%
+  DamageModifiers:
+  - PROJECTILE 0.05
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -26,6 +29,7 @@ PetrifyingZombie:
   - PetrifiedFeet FEET
   - AIR HAND
   AITargetSelectors:
+  - clear
   - SpecificFaction Zombie
   Skills:
   - skill{s=InfectPetrify} @target ~onAttack
@@ -38,6 +42,32 @@ PetrifyingZombieInfected:
   Faction: StoneInfected
   Options:
     PreventTransformation: true
+    ReinforcementsChance: 75%
+    MovementSpeed: 0.1
+  DamageModifiers:
+  - PROJECTILE 0.05
+  Equipment:
+  - CobbleHead HEAD
+  - PetrifiedChest CHEST
+  - PetrifiedLegs LEGS
+  - PetrifiedFeet FEET
+  - AIR HAND
+  AITargetSelectors:
+  - clear
+  - SpecificFaction Zombie
+  Skills:
+  - skill{s=InfectPetrify} @target ~onAttack
+  - skill{s=PlayerInfect} @target ~onAttack 0.5
+  - skill{s=TryFullPetrify} ~onTimer:200
+PetrifyingZombieInfectedPlayers:
+  Type: ZOMBIE
+  Damage: 10
+  Faction: StoneInfected
+  Options:
+    PreventTransformation: true
+    ReinforcementsChance: 75%
+  DamageModifiers:
+  - PROJECTILE 0.05
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST

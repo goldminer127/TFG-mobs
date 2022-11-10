@@ -1,5 +1,6 @@
 BabyZombie:
   Type: BABY_ZOMBIE
+  Faction: Zombie
   Equipment:
   - AIR HEAD
   - AIR CHEST

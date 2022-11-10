@@ -30,7 +30,7 @@ Ent:
   Modules:
     ThreatTable: true
   DamageModifiers:
-  - PROJECTILE 0.05
+  - PROJECTILE 0.001
   AITargetSelectors:
   - clear
   - players
