@@ -73,3 +73,70 @@ EldrentheEnt:
     MovementSpeed: 0.2
     MaxCombatDistance: 25
     PreventOtherDrops: true
+EldrentheEnt:
+  Type: Zombie
+  Display: 'Eldren the Old'
+  Health: 700
+  Damage: 10
+  Skills:
+  - model{mid=ent} @self ~onSpawn
+  - speak{m="You dare challenge me! I have watched kingdoms crumble, just as you will!";cooldown=20} @PlayersInRadius{r=40}
+    ~onCombat >0 0.2
+  - speak{m="To dust you return, <trigger.name>!"} @PlayersInRadius{r=40} ~onPlayerKill
+    >0 1
+  BossBar:
+    Enabled: true
+    Title: 'Eldren the Old'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+
+
+### Wild ###
+StabilizedPetrifiedZombie:
+  Type: ZOMBIE
+  Display: '&5Stabilized Petrified Zombie'
+  Health: 50
+  Equipment:
+  - StableCobbleHead HEAD
+  - StablePetrifiedChestplate CHEST
+  - StablePetrifiedLeggings LEGS
+  - StablePetrifiedBoots FEET
+  - AIR HAND
+  AITargetSelectors:
+  - 1 players
+  DamageModifiers:
+  - ENTITY_ATTACK 0.25
+  - PROJECTILE 0
+  - FIRE_TICK 0
+  - FIRE 0
+  - LAVA 0
+  - MAGIC 0
+  Options:
+    MovementSpeed: 0.3
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    PreventTransformation: true
+    Despawn: false
+    FollowRange: 50
+  Drops:
+  - exp 750-1000 1
+  - StablePetrifiedDrops
+  - StableWildEssenseDrop
+  Skills:
+  - skill{s=StoneSpawn} @trigger ~onTimer:200
+  - skill{s=SuperStonePrison} ~onTimer:600
+  - skill{s=StoneThrow} @target ~onTimer:50
+  - skill{s=HardResistance} ~onDamaged
+  - skill{s=GroundStoneAura} ~onTimer:1
+  - damage{a=5;i=true} @target ~onAttack
+  - sound{s=item.totem.use;v=10;p=0.5;sc=master} @Self ~onDeath
+ 

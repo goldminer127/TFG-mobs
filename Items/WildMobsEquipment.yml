@@ -1,3 +1,4 @@
+#Petrifying Zombie
 CobbleHead:
   Id: COBBLESTONE
   Attributes:
@@ -5,6 +6,7 @@ CobbleHead:
       Armor: 3
       KnockbackResistance: 50%
       MovementSpeed: -0.02
+#Petrified Zombie
 StoneHead:
   Id: STONE
   Attributes:
@@ -39,3 +41,35 @@ PetrifiedFeet:
       Armor: 3
       KnockbackResistance: 50%
       MovementSpeed: -0.02
+
+#Stable Petrifying Zombie
+StableCobbleHead:
+  Id: COBBLESTONE
+  Attributes:
+    Head:
+      Armor: 20
+      KnockbackResistance: 100%
+StablePetrifiedChest:
+  Id: LEATHER_CHESTPLATE
+  Options:
+    Color: 200,200,200
+  Attributes:
+    Chest:
+      Armor: 20
+      KnockbackResistance: 100%
+StablePetrifiedLegs:
+  Id: LEATHER_LEGGINGS
+  Options:
+    Color: 200,200,200
+  Attributes:
+    Legs:
+      Armor: 20
+      KnockbackResistance: 100%
+StablePetrifiedFeet:
+  Id: LEATHER_BOOTS
+  Options:
+    Color: 200,200,200
+  Attributes:
+    Feet:
+      Armor: 20
+      KnockbackResistance: 100%

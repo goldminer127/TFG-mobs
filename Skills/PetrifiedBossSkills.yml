@@ -1,0 +1,106 @@
+StoneAwakening:
+  Skills:
+  - delay 90
+  - summon{type=StabilizedPetrifiedZombie;amount=1} @self
+  - sound{s=entity.wither.spawn;v=10;p=0;sc=master} @Self
+StoneSpawn:
+  Skills:
+  - summon{type=PetrifyingZombieInfected;r=10;Radius=10;amount=8} @self
+  - summon{type=ZOMBIE;r=10;Radius=10;amount=20} @self
+StoneThrow:
+  Skills:
+  - sound{s=ui.stonecutter.take_result;v=10;p=1;sc=master} @self
+  - delay 20
+  - projectile{bulletType=BLOCK;material=STONE;hnp=true;oH=StoneProjectile;i=1;v=30;g=0.25;syo=3}
+StoneProjectile:
+  Skills:
+  - damage{a=40}
+  - sound{s=entity.wither.break_block;v=20;p=0;sc=master} @Self
+  - throw{velocity=10;velocityY=1;repeat=2;repeatInterval=2}
+GroundStoneAura:
+  Skills:
+  - effect:blockmask{m=stone;r=5;d=24000} @self
+
+
+StoneSignal1:
+  Cooldown: 20000
+  Conditions:
+  - health{h=<200} true
+  - health{h=>180} true
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;p=1.2;v=10;sc=master} @Self
+  - delay 20
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~15 ~-2 ~15 ~15 ~ ~15 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~17 ~1 ~17 ~13 ~2 ~13 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~16 ~3 ~16 ~14 ~3 ~14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~15 ~4 ~16 ~15 ~4 ~14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~16 ~4 ~15 ~14 ~4 ~15 minecraft:stone"}
+
+StoneSignal2:
+  Cooldown: 20000
+  Conditions:
+  - health{h=<150} true
+  - health{h=>130} true
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;p=1.2;v=10;sc=master} @Self
+  - delay 20
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~ ~-2 ~15 ~ ~ ~15 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~2 ~1 ~17 ~-2 ~2 ~13 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~1 ~3 ~16 ~-1 ~3 ~14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~ ~4 ~16 ~ ~4 ~14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~1 ~4 ~15 ~-1 ~4 ~15 minecraft:stone"}
+
+StoneSignal3:
+  Cooldown: 20000
+  Conditions:
+  - health{h=<100} true
+  - health{h=>80} true
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;p=1.2;v=10;sc=master} @Self
+  - delay 20
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~-15 ~-2 ~15 ~-15 ~ ~15 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-17 ~1 ~17 ~-13 ~2 ~13 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-16 ~3 ~16 ~-14 ~3 ~14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-15 ~4 ~16 ~-15 ~4 ~14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-16 ~4 ~15 ~-14 ~4 ~15 minecraft:stone"}
+
+StoneSignal4:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;p=1.2;v=10;sc=master} @Self
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~-15 ~-2 ~ ~-15 ~ ~ minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-17 ~1 ~2 ~-13 ~2 ~-2 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-16 ~3 ~1 ~-14 ~3 ~-1 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-15 ~4 ~1 ~-15 ~4 ~-1 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-16 ~4 ~ ~-14 ~4 ~ minecraft:stone"}
+  - delay 5
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~-15 ~-2 ~-15 ~-15 ~ ~-15 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-17 ~1 ~-17 ~-13 ~2 ~-13 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-16 ~3 ~-16 ~-14 ~3 ~-14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-15 ~4 ~-16 ~-15 ~4 ~-14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~-16 ~4 ~-15 ~-14 ~4 ~-15 minecraft:stone"}
+  - delay 5
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~ ~-2 ~-15 ~ ~ ~-15 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~2 ~1 ~-17 ~-2 ~2 ~-13 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~1 ~3 ~-16 ~-1 ~3 ~-14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~ ~4 ~-16 ~ ~4 ~-14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~1 ~4 ~-15 ~-1 ~4 ~-15 minecraft:stone"}
+  - delay 5
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~15 ~-2 ~-15 ~15 ~ ~-15 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~17 ~1 ~-17 ~13 ~2 ~-13 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~16 ~3 ~-16 ~14 ~3 ~-14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~15 ~4 ~-16 ~15 ~4 ~-14 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~16 ~4 ~-15 ~14 ~4 ~-15 minecraft:stone"}
+  - delay 5
+  - sound{s=entity.zombie.break_wooden_door;p=1.2;v=10;sc=master} @Self
+  - command{c="execute at <mob.uuid> run fill ~15 ~-2 ~ ~15 ~ ~ minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~17 ~1 ~2 ~13 ~2 ~-2 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~16 ~3 ~1 ~14 ~3 ~-1 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~15 ~4 ~1 ~15 ~4 ~-1 minecraft:stone"}
+  - command{c="execute at <mob.uuid> run fill ~16 ~4 ~ ~14 ~4 ~ minecraft:stone"}

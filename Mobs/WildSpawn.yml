@@ -15,13 +15,13 @@ BuddingZombie:
   - exp 10 0.5
 PetrifyingZombie:
   Type: ZOMBIE
+  Health: 30
   Damage: 10
   Faction: StoneInfected
   Options:
-    PreventTransformation: true
     ReinforcementsChance: 75%
   DamageModifiers:
-  - PROJECTILE 0.05
+  - PROJECTILE 0.005
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -38,14 +38,14 @@ PetrifyingZombie:
   - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
 PetrifyingZombieInfected:
   Type: ZOMBIE
+  Health: 30
   Damage: 10
   Faction: StoneInfected
   Options:
-    PreventTransformation: true
     ReinforcementsChance: 75%
     MovementSpeed: 0.3
   DamageModifiers:
-  - PROJECTILE 0.05
+  - PROJECTILE 0.005
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -61,13 +61,13 @@ PetrifyingZombieInfected:
   - skill{s=TryFullPetrify} ~onTimer:200
 PetrifyingZombieInfectedPlayers:
   Type: ZOMBIE
+  Health: 30
   Damage: 10
   Faction: StoneInfected
   Options:
-    PreventTransformation: true
     ReinforcementsChance: 75%
   DamageModifiers:
-  - PROJECTILE 0.05
+  - PROJECTILE 0.005
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -82,11 +82,11 @@ PetrifyingZombieInfectedPlayers:
   - skill{s=TryFullPetrify} ~onTimer:200
 PetrifiedZombie:
   Type: ZOMBIE
-  Health: 40
+  Health: 50
   Damage: 25
   Faction: StoneInfected
-  Options:
-    PreventTransformation: true
+  DamageModifiers:
+  - PROJECTILE 0.005
   Modules:
     ThreatTable: true
   Equipment:

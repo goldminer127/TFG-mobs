@@ -52,6 +52,42 @@ EntSignalMob:
   Skills:
   - skill{s=SpawnEntTriggerDelay} ~onSpawn
 
+StabilizedDormantPetrifiedZombie:
+  Type: ZOMBIE
+  Health: 500
+  Armor: 80
+  Faction: Wild
+  Equipment:
+  - PetrifiedHelmet HEAD
+  - PetrifiedChestplate CHEST
+  - PetrifiedLeggings LEGS
+  - PetrifiedBoots FEET
+  - AIR HAND
+  DamageModifiers:
+  - ENTITY_ATTACK 1
+  - PROJECTILE 0
+  - FIRE_TICK 0
+  - FIRE 0
+  - LAVA 0
+  - LIGHTNING 0
+  AITargetSelectors:
+  - 1 clear
+  Options:
+    NoAI: true
+    Collidable: false
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Despawn: false
+  Skills:
+  - skill{s=StoneSignal1} @trigger ~onDamaged
+  - skill{s=StoneSignal2} @trigger ~onDamaged
+  - skill{s=StoneSignal3} @trigger ~onDamaged
+  - skill{s=StoneSignal4} @trigger ~onDeath
+  - skill{s=StoneAwakening} @trigger ~onDeath
+
+#For armor replacements
 ReplaceArmorMob:
   Type: SILVERFISH
   Options:
