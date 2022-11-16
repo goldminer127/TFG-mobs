@@ -128,9 +128,7 @@ StabilizedPetrifiedZombie:
     Despawn: false
     FollowRange: 50
   Drops:
-  - exp 750-1000 1
-  - StablePetrifiedDrops
-  - StableWildEssenseDrop
+  - COBBLESTONE: 1728 1
   Skills:
   - skill{s=StoneSpawn} @trigger ~onTimer:200
   - skill{s=SuperStonePrison} ~onTimer:600

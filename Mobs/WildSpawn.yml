@@ -20,6 +20,7 @@ PetrifyingZombie:
   Faction: StoneInfected
   Options:
     ReinforcementsChance: 75%
+    Despawn: false
   DamageModifiers:
   - PROJECTILE 0.005
   Equipment:
@@ -35,6 +36,7 @@ PetrifyingZombie:
   - skill{s=InfectPetrify} @target ~onAttack
   - skill{s=PlayerInfect} @target ~onAttack 0.5
   - skill{s=TryFullPetrify} ~onTimer:200
+  - variablesubtract{var=skill.stonespawn;amount=1} ~onDeath
   - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
 PetrifyingZombieInfected:
   Type: ZOMBIE
@@ -44,6 +46,7 @@ PetrifyingZombieInfected:
   Options:
     ReinforcementsChance: 75%
     MovementSpeed: 0.3
+    Despawn: false
   DamageModifiers:
   - PROJECTILE 0.005
   Equipment:
@@ -66,6 +69,7 @@ PetrifyingZombieInfectedPlayers:
   Faction: StoneInfected
   Options:
     ReinforcementsChance: 75%
+    Despawn: false
   DamageModifiers:
   - PROJECTILE 0.005
   Equipment:
@@ -85,6 +89,8 @@ PetrifiedZombie:
   Health: 50
   Damage: 25
   Faction: StoneInfected
+  Options:
+    Despawn: false
   DamageModifiers:
   - PROJECTILE 0.005
   Modules:

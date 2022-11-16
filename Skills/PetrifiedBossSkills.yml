@@ -1,3 +1,11 @@
+DormantStoneSpawn:
+  Cooldown: 36000
+  Condition:
+  - variableEquals{var=skill.stonespawn;value=6} true
+  Skills:
+  - summon{type=PetrifyingZombie;r=10;Radius=500;amount=1} @self
+  - summon{type=PetrifiedZombie;r=10;Radius=500;amount=1} @self
+  - variableadd{var=skill.stonespawn;amount=1}
 StoneAwakening:
   Skills:
   - delay 90
@@ -20,6 +28,9 @@ StoneProjectile:
 GroundStoneAura:
   Skills:
   - effect:blockmask{m=stone;r=5;d=24000} @self
+SuperStonePrison:
+  Skills:
+  - prison{material=COBBLESTONE;duration=3600;breakable=true} @PlayersInRadius{r=20}
 
 
 StoneSignal1:

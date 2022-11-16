@@ -86,6 +86,8 @@ StabilizedDormantPetrifiedZombie:
   - skill{s=StoneSignal3} @trigger ~onDamaged
   - skill{s=StoneSignal4} @trigger ~onDeath
   - skill{s=StoneAwakening} @trigger ~onDeath
+  - skill{s=DormantStoneSpawn} ~onTimer:20
+  - setvariable{var=skill.stonespawned;value=0;save=true}
 
 #For armor replacements
 ReplaceArmorMob:
