@@ -104,7 +104,7 @@ StabilizedPetrifiedZombie:
   Health: 50
   Equipment:
   - StableCobbleHead HEAD
-  - StablePetrifiedChestplate CHEST
+  - StablePetrifiedChest CHEST
   - StablePetrifiedLegs LEGS
   - StablePetrifiedFeet FEET
   - AIR HAND
