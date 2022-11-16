@@ -58,10 +58,10 @@ StabilizedDormantPetrifiedZombie:
   Armor: 80
   Faction: Wild
   Equipment:
-  - PetrifiedHelmet HEAD
-  - PetrifiedChestplate CHEST
-  - PetrifiedLeggings LEGS
-  - PetrifiedBoots FEET
+  - StoneHead HEAD
+  - PetrifiedChest CHEST
+  - PetrifiedLegs LEGS
+  - PetrifiedFeet FEET
   - AIR HAND
   DamageModifiers:
   - ENTITY_ATTACK 1

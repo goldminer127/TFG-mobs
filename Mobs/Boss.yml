@@ -105,8 +105,8 @@ StabilizedPetrifiedZombie:
   Equipment:
   - StableCobbleHead HEAD
   - StablePetrifiedChestplate CHEST
-  - StablePetrifiedLeggings LEGS
-  - StablePetrifiedBoots FEET
+  - StablePetrifiedLegs LEGS
+  - StablePetrifiedFeet FEET
   - AIR HAND
   AITargetSelectors:
   - 1 players

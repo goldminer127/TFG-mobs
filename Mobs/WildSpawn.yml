@@ -37,7 +37,7 @@ PetrifyingZombie:
   - skill{s=PlayerInfect} @target ~onAttack 0.5
   - skill{s=TryFullPetrify} ~onTimer:200
   - variablesubtract{var=skill.stonespawn;amount=1} ~onDeath
-  - sound{s=entity.wither.spawn;v=3;p=0.1} @self ~onSpawn
+  - sound{s=entity.wither.spawn;v=150;p=0.1} @self ~onSpawn
 PetrifyingZombieInfected:
   Type: ZOMBIE
   Health: 30

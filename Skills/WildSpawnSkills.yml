@@ -18,7 +18,7 @@ InfectPetrify:
   Skills:
   - remove @target
   - randomskill{skills=SummonPetrifiedPlayerTarget,SummonPetrifiedZombieTarget} @self
-  - sound{s=entity.wither.break_block;v=1;p=0} @self ~onAttack
+  - sound{s=entity.wither.break_block;v=3;p=0} @self ~onAttack
 SummonPetrifiedPlayerTarget:
   Skills:
   - summon{type=PetrifyingZombieInfectedPlayers;amount=1;radius=2} @self
@@ -28,7 +28,7 @@ SummonPetrifiedZombieTarget:
 FullPetrify:
   Skills:
   - summon{type=PetrifiedZombie;amount=1;radius=1} @self
-  - sound{s=entity.wither.break_block;v=1;p=0} @self ~onAttack
+  - sound{s=entity.wither.break_block;v=3;p=0} @self ~onAttack
   - remove @self
 HardResistance:
   TargetConditions:
