@@ -73,3 +73,40 @@ StablePetrifiedFeet:
     Feet:
       Armor: 20
       KnockbackResistance: 100%
+
+#Freezing Zombies
+IceHead:
+  Id: ICE
+  Attributes:
+    Head:
+      Armor: 15
+      KnockbackResistance: 100%
+IceChest:
+  Id: LEATHER_CHESTPLATE
+  Options:
+    Color: 204,255,255
+  Attributes:
+    Chest:
+      Armor: 15
+      KnockbackResistance: 100%
+IceLegs:
+  Id: LEATHER_LEGGINGS
+  Options:
+    Color: 204,255,255
+  Attributes:
+    Legs:
+      Armor: 15
+      KnockbackResistance: 100%
+IceFeet:
+  Id: LEATHER_BOOTS
+  Options:
+    Color: 204,255,255
+  Attributes:
+    Feet:
+      Armor: 15
+      KnockbackResistance: 100%
+
+LongFlameBow:
+  Id: BOW
+  Enchantments:
+  - ARROW_FIRE:5

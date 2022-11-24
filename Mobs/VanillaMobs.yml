@@ -3,6 +3,10 @@
 #  
 ZOMBIE:
   Faction: Zombie
+  Options:
+    PreventRenaming: false
+  Skills:
+  - skill{s=ConvertToFreeze} @self ~onTimer:60 0.05
 
 CAVE_SPIDER:
   Health: 30

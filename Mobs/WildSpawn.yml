@@ -22,7 +22,7 @@ PetrifyingZombie:
     ReinforcementsChance: 75%
     Despawn: false
   DamageModifiers:
-  - PROJECTILE 0.005
+  - CUSTOM 0.5
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -48,7 +48,7 @@ PetrifyingZombieInfected:
     MovementSpeed: 0.3
     Despawn: false
   DamageModifiers:
-  - PROJECTILE 0.005
+  - CUSTOM 0.5
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -71,7 +71,7 @@ PetrifyingZombieInfectedPlayers:
     ReinforcementsChance: 75%
     Despawn: false
   DamageModifiers:
-  - PROJECTILE 0.005
+  - CUSTOM 0.5
   Equipment:
   - CobbleHead HEAD
   - PetrifiedChest CHEST
@@ -92,7 +92,7 @@ PetrifiedZombie:
   Options:
     Despawn: false
   DamageModifiers:
-  - PROJECTILE 0.005
+  - CUSTOM 0.5
   Modules:
     ThreatTable: true
   Equipment:
@@ -104,6 +104,25 @@ PetrifiedZombie:
   Skills:
   - skill{s=HardResistance} @trigger ~onDamaged
   - skill{s=StonePrison} @target ~onAttack 0.25
+FreezingZombie:
+  Type: ZOMBIE
+  Health: 40
+  Damage: 15
+  Options:
+    PreventRenaming: false
+    FollowRange: 60
+  DamageModifiers:
+  - CUSTOM 0.5
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IceHead HEAD
+  - IceChest CHEST
+  - IceLegs LEGS
+  - IceFeet FEET
+  - AIR HAND
+  Skills:
+  - skill{s=FreezingTouch} @target ~onAttack
 # Necromancer Soldier Tank Class 
 UndeadSwordsman:
   Type: ZOMBIE
@@ -127,6 +146,7 @@ UndeadSwordsman:
   - skill{s=SwordBlock} @trigger ~onDamaged
   - skill{s=ChangeRandomTarget} @target ~onSignal:NecroSpawn
 
+#DO NOT USE MOB, SKILL CURRENTLY BROKEN DUE TO BUG
 ToughZombie:
   Type: ZOMBIE
   Health: 45
@@ -186,6 +206,10 @@ AngrySkeleton:
   Drops:
   - BONE 1-3 0.5
   - STICK 1 1
+FlameBowSkeleton:
+  Type: SKELETON
+  Equipment:
+  - LongFlameBow HAND
 # Necromancer Soldier Attack Class
 UndeadWarrior:
   Type: SKELETON
@@ -327,6 +351,36 @@ WildWeaverSpider:
   Health: 30
   Skills:
   - skill{s=SlownessWebShot} @target ~onTimer:200
+
+##### Enderman Based #####
+SuicideEnderman:
+  Type: ENDERMAN
+  Health: 5
+  AITargetSelectors:
+  - players
+  Skills:
+  - summon{type=ENDERMAN;a=2;r=15;yr=0} @self ~onSpawn
+  - skill{s=SuicideRallyEnderman} @target ~onAttack
+
+##### Fish Based? Heh... #####
+AngryCod:
+  Type: COD
+  Damage: 2
+  AITargetSelectors:
+  - players
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+AngrySalmon:
+  Type: SALMON
+  Damage: 4
+  AITargetSelectors:
+  - players
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
 
 ##### PASSIVE MOBS #####
 #Rabbit Based

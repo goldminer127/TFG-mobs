@@ -41,13 +41,13 @@ InfectPetrify:
   - sound{s=entity.wither.break_block;v=3;p=0} @self ~onAttack
 SummonPetrifiedPlayerTarget:
   Skills:
-  - summon{type=PetrifyingZombieInfectedPlayers;amount=1;radius=2} @self
+  - summon{type=PetrifyingZombieInfectedPlayers;amount=1;radius=0} @self
 SummonPetrifiedZombieTarget:
   Skills:
-  - summon{type=PetrifyingZombieInfected;amount=1;radius=2} @self
+  - summon{type=PetrifyingZombieInfected;amount=1;radius=0} @self
 FullPetrify:
   Skills:
-  - summon{type=PetrifiedZombie;amount=1;radius=1} @self
+  - summon{type=PetrifiedZombie;amount=1;radius=0} @self
   - sound{s=entity.wither.break_block;v=3;p=0} @self ~onAttack
   - remove @self
 HardResistance:
@@ -65,6 +65,21 @@ PlayerInfect:
 StonePrison:
   Skills:
   - prison{material=STONE;duration=100;breakable=true}
+
+#FreezingZombie
+ConvertToFreeze: #used by vanilla zombies to convert
+  Conditions:
+  - biome{b=GROVE,SNOWY_TUNDRA,SNOWY_MOUNTAINS,ICE_SPIKES,SNOWY_PLAINS,FROZEN_RIVER,SNOWY_TAIGA,FROZEN_OCEAN} true
+  Skills:
+  - summon{type=FreezingZombie;amount=1;radius=0}
+  - sound{s=entity.player.hurt_freeze;v=3;p=0}
+  - sound{s=block.glass.break;v=3;p=0.5;delay=10}
+  - remove
+FreezingTouch:
+  Skills:
+  - freeze{ticks=100;repeat=5;repeatInterval=20}
+  - potion{type=SLOW;duration=100;level=3;p=false}
+  - damage{a=1;pkb=true;pi=true;ia=true;repeat=5;repeatInterval=20}
 
 #Budding Zombie
 SummonBabyZombie:
@@ -152,6 +167,13 @@ DeadlyBolt-Hit:
   - potion{type=HUNGER;duration=100;lvl=3}
   - potion{type=WEAKNESS;duration=25;lvl=2}
 
+###################  ENDERMAN  ###################
+
+#SuicideEnderman
+SuicideRallyEnderman:
+  Skills:
+  - rally{types=ENDERMAN;radius=25;ot=false}
+  - suicide
 
 ##################  MULTIUSE  ###################
 
@@ -193,6 +215,7 @@ ChangeRandomTarget:
   - threat{amount=0;mode=set}
   - threat{amount=10000} @PlayersInRadius{r=24;limit=1;sort=RANDOM}
 
+#DO NOT USE MOB, SKILL CURRENTLY BROKEN DUE TO BUG
 #ToughZombie
 GrabAndThrow:
   Skills:
