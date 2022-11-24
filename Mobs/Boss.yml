@@ -30,7 +30,9 @@ Ent:
   Modules:
     ThreatTable: true
   DamageModifiers:
-  - PROJECTILE 0.001
+  - CUSTOM 0.001 #Reduce gun damage
+  Options:
+  - MaxCombatDistance: 10 #Prevent guns being used from range
   AITargetSelectors:
   - clear
   - players
@@ -73,29 +75,6 @@ EldrentheEnt:
     MovementSpeed: 0.2
     MaxCombatDistance: 25
     PreventOtherDrops: true
-EldrentheEnt:
-  Type: Zombie
-  Display: 'Eldren the Old'
-  Health: 700
-  Damage: 10
-  Skills:
-  - model{mid=ent} @self ~onSpawn
-  - speak{m="You dare challenge me! I have watched kingdoms crumble, just as you will!";cooldown=20} @PlayersInRadius{r=40}
-    ~onCombat >0 0.2
-  - speak{m="To dust you return, <trigger.name>!"} @PlayersInRadius{r=40} ~onPlayerKill
-    >0 1
-  BossBar:
-    Enabled: true
-    Title: 'Eldren the Old'
-    Range: 20
-    Color: RED
-    Style: SOLID
-  Options:
-    AlwaysShowName: true
-    MovementSpeed: 0.2
-    MaxCombatDistance: 25
-    PreventOtherDrops: true
-
 
 ### Wild ###
 StabilizedPetrifiedZombie:
@@ -122,7 +101,6 @@ StabilizedPetrifiedZombie:
     Silent: true
     PreventSunburn: true
     KnockbackResistance: 1
-    PreventRandomEquipment: true
     PreventOtherDrops: true
     PreventTransformation: true
     Despawn: false

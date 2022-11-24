@@ -1,3 +1,8 @@
+##### For Spider Related Dungeons #####
+
+# wild spawns should not be put in these files, however they can be used in dungeons #
+# dungeon mobs that do not spawn in the wild go here #
+
 WeaverSpider:
   Type: CAVE_SPIDER
   Health: 24

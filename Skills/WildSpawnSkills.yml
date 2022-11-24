@@ -1,14 +1,34 @@
-SummonBabyZombie:
-  Skills:
-  - sound{s=block.beehive.exit} @self
-  - summon{type=BabyZombie;amount=1;r=1}
+###################  CREEPERS ###################
+
+#Leaper
 LeaperLeap:
-  Cooldown: 300
+  Cooldown: 5
   Skills:
   - delay 40
   - effect:particlesphere{particle=smoke;amount=20;radius=1;vs=1;s=0;repeat=2;repeatInterval=2} @self
   - delay 5
   - leap{velocity=500;delay=20}
+#BuddingCreeper
+ExplosiveBud:
+  Skills:
+  - summon{type=BuddedCreeper;amount=5;radius=1;yr=2;yu=true;sio=false;sip=false}
+  - summon{type=BuddingCreeper;amount=1;radius=1;yr=2;yu=true;sio=false;sip=false}
+  - delay 2
+  - throw{velocity=10;velocityY=5;repeat=2;repeatInterval=2} @MIR{r=3;t=BuddedCreeper,BuddingCreeper}
+#GravityCreeper
+CreepingGravity:
+  Conditions:
+  - incombat true
+  Cooldown: 25
+  Skills:
+  - stun{d=150;f=true} @self
+  - effect:particles{particle=cloud;amount=100;hS=15;vS=1;speed=0.25;dir=<caster.l.x>,<caster.l.y>,<caster.l.z>;repeat=30;repeatInterval=5} @self
+  - pull{velocity=3;repeat=30;repeatInterval=5} @PIR{r=15}
+  - pull{velocity=3;repeat=30;repeatInterval=5} @EIR{r=15}
+
+###################  ZOMBIES  ###################
+
+#Petrifying Zombies
 TryFullPetrify:
   Skills:
   - skill{s=FullPetrify} @self 0.05
@@ -45,3 +65,144 @@ PlayerInfect:
 StonePrison:
   Skills:
   - prison{material=STONE;duration=100;breakable=true}
+
+#Budding Zombie
+SummonBabyZombie:
+  Skills:
+  - sound{s=block.beehive.exit} @self
+  - summon{type=BabyZombie;amount=1;r=1}
+
+#BabyZombieThrower
+#DO NOT USE MOB, SKILL CURRENTLY BROKEN DUE TO BUG
+GrabBaby:
+  Skills:
+  - summon{type=BabyZombie;amount=1;r=1} @self
+  - delay 5
+  - mountme @MIR{r=2;t=BabyZombie}
+ThrowBaby:
+  Skills:
+  - ejectpassenger
+  - throw{velocity=5;velocityY=2;repeat=2;repeatInterval=2} @MIR{r=2;t=BabyZombie}
+
+###################  VEX  ###################
+
+#Vengeful Soul
+LevetationShot:
+  Skills:
+  - effect:particleline{particle=snowballpoof;amount=10;fromOrigin=true}
+  - damage{a=2;pkb=true;pi=true}
+  - potion{type=LEVITATION;duration=100;level=1;p=false}
+
+#Vengeful Soul
+GrabShot:
+  Skills:
+  - effect:particleline{particle=crit;amount=10;fromOrigin=true}
+  - damage{a=8;pkb=true;pi=true}
+  - pull{velocity=3}
+
+##################  EVOKER  ###################
+
+#Necromancer
+SummonArmoredUndead:
+  Conditions:
+  - incombat true
+  Skills:
+  - effect:playanimation{a=0;audience=World}
+  - sound{s=entity.skeleton.converted_to_stray;v=2;p=0}
+  - summon{type=UndeadWarrior;a=1;r=3;yr=0;repeat=4;repeatInterval=5}
+  - summon{type=UndeadSwordsman;a=1;r=3;yr=0;repeat=4;repeatInterval=5}
+  - delay 5
+  - signal{s=NecroSpawn} @MobsInRadius{r=3;t=UndeadWarrior,UndeadSwordsman}
+  - delay 200 #extra cooldown on this roll
+
+#Necromancer
+SummonUndead:
+  Conditions:
+  - incombat true
+  Skills:
+  - effect:playanimation{a=0;audience=World}
+  - sound{s=entity.skeleton.converted_to_stray;v=2;p=0}
+  - summon{type=MeleeSkeleton;a=1;r=20;yr=0;repeat=4;repeatInterval=5}
+  - summon{type=ZOMBIE;a=1;r=25;yr=0;repeat=10;repeatInterval=5}
+
+#Necromancer
+SummonAngryUndead:
+  Conditions:
+  - incombat true
+  Skills:
+  - effect:playanimation{a=0;audience=World}
+  - sound{s=entity.skeleton.converted_to_stray;v=2;p=0}
+  - summon{type=MeleeSkeleton;a=1;r=20;yr=0;repeat=6;repeatInterval=5}
+  - summon{type=AngrySkeleton;a=1;r=20;yr=0;repeat=2;repeatInterval=5}
+  - delay 400 #extra cooldown on this roll
+
+#Necromancer
+DeadlyBolt:
+  Conditions:
+  - incombat true
+  Skills:
+  - sound{s=entity.shulker.shoot;v=1;p=0} @self
+  - projectile{onTick=DeadlyBolt-Tick;onHit=DeadlyBolt-Hit;v=5;i=1;hR=1;vR=1}
+DeadlyBolt-Tick:
+  Skills:
+  - effect:particles{p=crit_magic;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+DeadlyBolt-Hit:
+  Skills:
+  - damage{a=5;pi=true}
+  - potion{type=HUNGER;duration=100;lvl=3}
+  - potion{type=WEAKNESS;duration=25;lvl=2}
+
+
+##################  MULTIUSE  ###################
+
+#Undead Warrior, Undead Swordsman
+SwordBash:
+  Cooldown: 8
+  Skills:
+  - damage{a=2;pi=true}
+  - throw{velocity=10;velocityY=1;}
+  - sound{s=entity.zombie.attack_iron_door;v=1;p=1}
+  - skill{s=ChangeTargetNearest}
+  - shieldbreak{duration=200}
+
+#Undead Warrior, UndeadSwordsmen
+SwordBlock:
+  Conditions:
+  - stance{s=BlockReady} true
+  Skills:
+  - look{headOnly=false}
+  - effect:playanimation{a=0;audience=World} @self
+  - throw{velocity=10;velocityY=1;}
+  - sound{s=entity.zombie.attack_iron_door;v=1;p=0}
+  - skill{s=ChangeTargetNearest}
+  - setstance{stance=BlockDown} @self
+  - delay 70
+  - skill{s=SwordBlockCooldown} @self
+ReadySwordBlock:
+  Conditions:
+  - stance{s=BlockReady} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=30;level=255;p=false}
+SwordBlockCooldown:
+  Skills:
+  - setstance{stance=BlockReady}
+
+#Undead Warrior, Undead Swordsman
+ChangeRandomTarget:
+  Skills:
+  - threat{amount=0;mode=set}
+  - threat{amount=10000} @PlayersInRadius{r=24;limit=1;sort=RANDOM}
+
+#ToughZombie
+GrabAndThrow:
+  Skills:
+  - mountme
+  - ejectpassenger
+  - damage{a=10;pi=true}
+  - throw{velocity=5;velocityY=3;repeat=2;repeatInterval=2}
+
+##################  GENERIC  ###################
+ChangeTargetNearest:
+  Skills:
+  - threat{amount=0;mode=set}
+  - threat{amount=10000} @NearestPlayer

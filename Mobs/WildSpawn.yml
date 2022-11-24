@@ -1,4 +1,4 @@
-#Zombie Based
+##### Zombie Based #####
 BuddingZombie:
   Type: ZOMBIE
   AIGoalSelectors:
@@ -104,8 +104,50 @@ PetrifiedZombie:
   Skills:
   - skill{s=HardResistance} @trigger ~onDamaged
   - skill{s=StonePrison} @target ~onAttack 0.25
+# Necromancer Soldier Tank Class 
+UndeadSwordsman:
+  Type: ZOMBIE
+  Health: 75
+  Damage: 6.5
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 30
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  Skills:
+  - setstance{stance=BlockReady} @self ~onSpawn
+  - skill{s=SwordBash} @target ~onAttack
+  - skill{s=ReadySwordBlock} @self ~onTimer:20
+  - skill{s=SwordBlock} @trigger ~onDamaged
+  - skill{s=ChangeRandomTarget} @target ~onSignal:NecroSpawn
 
-#Skeleton Based
+ToughZombie:
+  Type: ZOMBIE
+  Health: 45
+  Damage: 5
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=GrabAndThrow} @target ~onAttack 0.5
+
+#DO NOT USE MOB, SKILL CURRENTLY BROKEN DUE TO BUG
+BabyZombieThrower:
+  Type: ZOMBIE
+  Health: 30
+  Damage: 4.5
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=GrabBaby} ~onSpawn
+  - skill{s=ThrowBaby} ~onEnterCombat
+
+##### Skeleton Based #####
 MeleeSkeleton:
   Type: SKELETON
   Damage: 3.5
@@ -119,6 +161,7 @@ MeleeSkeleton:
   Options:
     MovementSpeed: 0.3
     PreventOtherDrops: true
+    FollowRange: 30
   Drops:
   - BONE 1-3 0.25
 AngrySkeleton:
@@ -143,6 +186,29 @@ AngrySkeleton:
   Drops:
   - BONE 1-3 0.5
   - STICK 1 1
+# Necromancer Soldier Attack Class
+UndeadWarrior:
+  Type: SKELETON
+  Health: 40
+  Damage: 10
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  Options:
+    FollowRange: 30
+  Skills:
+  - setstance{stance=BlockReady} @self ~onSpawn
+  - skill{s=SwordBash} @target ~onAttack
+  - skill{s=ReadySwordBlock} @self ~onTimer:20
+  - skill{s=SwordBlock} @trigger ~onDamaged
+  - skill{s=ChangeRandomTarget} @target ~onSignal:NecroSpawn
+
+##### Vex Based #####
 VengfulSoul:
   Type: VEX
   Health: 35
@@ -160,35 +226,109 @@ VengfulSoul:
   - STICK 1 1
   
 
-#Creeper Based
+##### Creeper Based #####
 Leaper:
-  Type: Creeper
+  Type: CREEPER
   Modules:
     ThreatTable: true
   Options:
     PreventOtherDrops: true
+    FuseTicks: 10
+    FollowRange: 30
+  DamageModifiers:
+  - FALL 0
   Skills:
   - skill{s=LeaperLeap} @target ~onEnterCombat
   Drops:
   - exp 15 1
   - GUNPOWDER 1-3 1
+BuddingCreeper:
+  Type: CREEPER
+  Health: 30
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    FuseTicks: 5
+    ExplosionRadius: 0
+  Skills:
+  - skill{s=ExplosiveBud} @self ~onPrime
+  Drops:
+  - exp 15 1
+  - GUNPOWDER 0-4 1
+MegaCreeper:
+  Type: CREEPER
+  Health: 50
+  Damage: 50
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    FuseTicks: 40
+    ExplosionRadius: 25
+    KnockbackResistance: 1
+  Drops:
+  - exp 25 1
+  - GUNPOWDER 1-10 1
+GravityCreeper:
+  Type: CREEPER
+  Health: 50
+  Damage: 25
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    FuseTicks: 30
+    ExplosionRadius: 15
+    FollowRange: 30
+  Skills:
+  - skill{s=CreepingGravity} ~onTimer:20
+  Drops:
+  - exp 50 1
+  - GUNPOWDER 1-5 1
   
-#Wither Skeleton Based
+##### Wither Skeleton Based #####
 FallenViking:
-  Health: 22
   Type: WITHER_SKELETON
+  Health: 35
+  Damage: 12
   Equipment:
-  - CARVED_PUMPKIN HEAD
+  - IRON_HELMET
   - IRON_AXE HAND
   - SHIELD OFFHAND
   Options:
     PreventOtherDrops: true
 
+##### Evoker Based #####
+Necromancer:
+  Type: EVOKER
+  Health: 150
+  Options:
+    PreventOtherDrops: true
+    MovementSpeed: 0.25
+    FollowRange: 25
+    FollowRange: 30
+  AIGoalSelectors:
+  - clear
+  - fleeplayers
+  - fleegolems
+  - fleewolf
+  - randomstroll
+  Modules:
+    ThreatTable: true
+  Skills:
+  - randomskill{skills=SummonUndead,SummonUndead,SummonAngryUndead,SummonArmoredUndead,SummonAngryUndead,SummonUndead,SummonUndead} @self ~onTimer:200
+  - summon{type=ZOMBIE;a=1;r=0} @self ~onDamaged 0.5
+  - skill{s=DeadlyBolt;repeat=4;repeatInterval=10} @RandomThreatTarget ~onTimer:100
 
+##### Spider Based #####
+WildWeaverSpider:
+  Type: SPIDER
+  Health: 30
+  Skills:
+  - skill{s=SlownessWebShot} @target ~onTimer:200
 
-
-
-#PASSIVE MOBS
+##### PASSIVE MOBS #####
 #Rabbit Based
 JungleShroom:
   Type: RABBIT

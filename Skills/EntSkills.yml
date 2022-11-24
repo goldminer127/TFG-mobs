@@ -30,14 +30,3 @@ TossMove:
 Gust:
   Skills:
   - pull{velocity=50}
-
-LevetationShot:
-  Skills:
-  - effect:particleline{particle=snowballpoof;amount=10;fromOrigin=true}
-  - damage{a=2;pkb=true;pi=true}
-  - potion{type=LEVITATION;duration=100;level=1;p=false}
-GrabShot:
-  Skills:
-  - effect:particleline{particle=crit;amount=10;fromOrigin=true}
-  - damage{a=8;pkb=true;pi=true}
-  - pull{velocity=3}
