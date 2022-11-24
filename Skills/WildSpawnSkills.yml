@@ -196,6 +196,7 @@ SwordBlock:
   - effect:playanimation{a=0;audience=World} @self
   - throw{velocity=10;velocityY=1;}
   - sound{s=entity.zombie.attack_iron_door;v=1;p=0}
+  - particles{particle=fireworks_spark;a=10;hs=0.3;vs=0.3;y=0.3;s=0.1125}
   - skill{s=ChangeTargetNearest}
   - setstance{stance=BlockDown} @self
   - delay 70
