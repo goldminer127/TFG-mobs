@@ -10,8 +10,8 @@ MiraBoss:
   - skill{s=MiraSkillPool2} @target ~onTimer:180
   - skill{s=MiraSkillPool3} @target ~onTimer:300
   - skill{s=MiraRegion} @self ~onTimer:100
-  - summon{type=WeaverSpider;amount=2;r=2} @self ~onSpawn
-  - summon{type=LeapingSpider;amount=2;r=2} @self ~onSpawn
+  - summon{type=WeaverSpider;amount=2;r=2;yr=0} @self ~onSpawn
+  - summon{type=LeapingSpider;amount=2;r=2;yr=0} @self ~onSpawn
   - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDeath
   - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDespawn
   Drops:
@@ -91,6 +91,7 @@ StabilizedPetrifiedZombie:
   - 1 players
   DamageModifiers:
   - ENTITY_ATTACK 0.25
+  - CUSTOM 0.25
   - PROJECTILE 0
   - FIRE_TICK 0
   - FIRE 0

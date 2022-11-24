@@ -22,9 +22,9 @@ CreepingGravity:
   Cooldown: 25
   Skills:
   - stun{d=150;f=true} @self
-  - effect:particles{particle=cloud;amount=100;hS=15;vS=1;speed=0.25;dir=<caster.l.x>,<caster.l.y>,<caster.l.z>;repeat=30;repeatInterval=5} @self
-  - pull{velocity=3;repeat=30;repeatInterval=5} @PIR{r=15}
-  - pull{velocity=3;repeat=30;repeatInterval=5} @EIR{r=15}
+  - effect:particles{particle=cloud;amount=100;hS=15;vS=1;speed=0.25;dir=0,0,0;repeat=30;repeatInterval=5} @self
+  - pull{velocity=3.5;repeat=30;repeatInterval=5} @PIR{r=15}
+  - pull{velocity=3.5;repeat=30;repeatInterval=5} @EIR{r=15}
 
 ###################  ZOMBIES  ###################
 
@@ -185,7 +185,7 @@ SwordBash:
   - throw{velocity=10;velocityY=1;}
   - sound{s=entity.zombie.attack_iron_door;v=1;p=1}
   - skill{s=ChangeTargetNearest}
-  - shieldbreak{duration=200}
+  - shieldbreak{duration=100}
 
 #Undead Warrior, UndeadSwordsmen
 SwordBlock:

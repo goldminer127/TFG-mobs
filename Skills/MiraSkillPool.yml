@@ -6,6 +6,8 @@ MiraSkillPool1:
   - randomskill{skills=SlownessWebShot,SpiderLeap,SpawnWeakSpiderRein}
   - delay 5
   - randomskill{skills=SlownessWebShot,WebStuck} @PlayersInRadius{r=24;limit=2;sort=RANDOM}
+  - delay 20
+  - skill{s=WebCage} @PlayersInRadius{r=24;limit=2;sort=RANDOM}
 
 #When 5-8 players are fighting this mob
 MiraSkillPool2:

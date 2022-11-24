@@ -13,8 +13,8 @@ StoneAwakening:
   - sound{s=entity.wither.spawn;v=10;p=0;sc=master} @Self
 StoneSpawn:
   Skills:
-  - summon{type=PetrifyingZombieInfected;r=10;Radius=10;amount=8} @self
-  - summon{type=ZOMBIE;r=10;Radius=10;amount=20} @self
+  - summon{type=PetrifyingZombieInfected;r=25;yr=0;amount=8} @self
+  - summon{type=ZOMBIE;r=25;yr=0;amount=20} @self
 StoneThrow:
   Skills:
   - sound{s=ui.stonecutter.take_result;v=10;p=1;sc=master} @self
