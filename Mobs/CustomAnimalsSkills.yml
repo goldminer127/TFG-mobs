@@ -1,0 +1,19 @@
+deerJump:
+  Conditions:
+  - PlayerWithin{d=10} true
+  Skills:
+  - jump{v=.2} @self
+  - setspeed{speed=2;type=walking}
+  
+deerSlow:
+  Conditions:
+  - PlayerWithin{d=12} false
+  Skills:
+  - setspeed{speed=1.3;type=walking}
+
+giraffeStomp:
+  Conditions:
+  - PlayerWithin{d=4} true
+  Skills:
+  - delay 20
+  - damage{amount=2;ia=true}
