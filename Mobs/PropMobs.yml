@@ -9,8 +9,13 @@ BabyZombie:
   - AIR HAND
   Options:
     PreventOtherDrops: true
-
-
+    
+BuddedCreeper:
+  Type: CREEPER
+  Options:
+    PreventOtherDrops: true
+  DamageModifiers:
+  - FALL 0
 
 MiraTrigger:
   Type: SILVERFISH
