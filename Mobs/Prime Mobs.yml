@@ -1,0 +1,25 @@
+###Prime's Mobs###
+
+FireOrc:
+  Type: Zombie
+  Display: '&cFire Orc'
+  Health: 100
+  Damage: 5
+  BossBar:
+    Enabled: true
+    Title: '&cFire Orc'
+    Color: RED
+  Options:
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+  Disguise: player MurkScream setCustomName "&cFire Orc" setSkin MurkScream
+  Skills:
+# - skill{s=FireballBarrage} ~onTimer:100
+# - skill{s=Homer} =5-60%
+  - skill{s=FloodFire}
+  DamageModifiers:
+  - FIRE -1
+  - LAVA 4
+  - FIRE_TICK 0

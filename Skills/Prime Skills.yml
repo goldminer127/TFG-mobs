@@ -1,0 +1,23 @@
+FloodFire:
+  Cooldown: 10
+  Skills:
+  - spring{t=lava;d=40} @target
+#FireballBarrage:
+#  Cooldown: 15
+#  Skills:
+#  - shootfireball{y=2;v=2} @target
+#  - delay 10
+#  - shootfireball{y=2;v=2} @target
+#  - delay 10
+#Homer:
+#  Cooldown: 15
+#  Skills:
+#  - missile{ot=Homer_TICK;oh=Homer_HIT;v=12;i=1;hR=1;vR=1;in=0.75}
+#Homer_TICK:
+#  Skills:
+#  - effect:particles{p=flame;a=1} @origin
+#Homer_HIT:
+#  Skills:
+#  - effect:particles{p=lava;a=50;hS=1;vS=1}
+#  - effect:sound{s=entity.generic.explode;v=1;p=0}
+#  - damage{a=4;i=true}
