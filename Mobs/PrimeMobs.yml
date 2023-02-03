@@ -3,3 +3,10 @@
 FireOrc:
   Type: Zombie
   Display: '&cFire Orc'
+LeapingSpider2:
+  Type: CAVE_SPIDER
+  Health: 24
+  Options:
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=SpiderLeap} @target ~onTimer:130
