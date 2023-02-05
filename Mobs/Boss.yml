@@ -1,0 +1,119 @@
+MiraBoss:
+  Type: SPIDER
+  Display: 'Mira'
+  Health: 800
+  Damage: 14
+  Modules:
+    ThreatTable: true
+  Skills:
+  - skill{s=MiraSkillPool1} @target ~onTimer:100
+  - skill{s=MiraSkillPool2} @target ~onTimer:180
+  - skill{s=MiraSkillPool3} @target ~onTimer:300
+  - skill{s=MiraRegion} @self ~onTimer:100
+  - summon{type=WeaverSpider;amount=2;r=2;yr=0} @self ~onSpawn
+  - summon{type=LeapingSpider;amount=2;r=2;yr=0} @self ~onSpawn
+  - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDeath
+  - summon{type=MiraSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDespawn
+  Drops:
+  - MiraDrops
+  BossBar:
+    Enabled: true
+    Title: 'Mira'
+    Range: 20
+    Color: RED
+    Style: SOLID
+Ent:
+  Type: IRON_GOLEM
+  Display: 'Ent'
+  Health: 1000
+  Damage: 10
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - CUSTOM 0.001 #Reduce gun damage
+  Options:
+  - MaxCombatDistance: 10 #Prevent guns being used from range
+  AITargetSelectors:
+  - clear
+  - players
+  - golems
+  - wolves
+  Skills:
+  - skill{s=SlamStrike} @target ~onTimer:600
+  - skill{s=TossMove} @playersInRadius{r=5;limit=1;sort=NEAREST} ~onTimer:230
+  - skill{s=Gust} @PlayersInRadius{r=50} ~onTimer:200
+  - skill{s=EntRegion} @self ~onTimer:100
+  - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDeath
+  - summon{type=EntSignalMob;amount=1;r=0} @location{c=213,58,344} ~onDespawn
+  Drops:
+  - EntDrops
+  BossBar:
+    Enabled: true
+    Title: 'Ent'
+    Range: 20
+    Color: GREEN
+    Style: SOLID
+EldrentheEnt:
+  Type: Zombie
+  Display: 'Eldren the Old'
+  Health: 700
+  Damage: 10
+  Skills:
+  - model{mid=ent} @self ~onSpawn
+  - speak{m="You dare challenge me! I have watched kingdoms crumble, just as you will!";cooldown=20} @PlayersInRadius{r=40}
+    ~onCombat >0 0.2
+  - speak{m="To dust you return, <trigger.name>!"} @PlayersInRadius{r=40} ~onPlayerKill
+    >0 1
+  BossBar:
+    Enabled: true
+    Title: 'Eldren the Old'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+
+### Wild ###
+StabilizedPetrifiedZombie:
+  Type: ZOMBIE
+  Display: '&5Stabilized Petrified Zombie'
+  Health: 50
+  Equipment:
+  - StableCobbleHead HEAD
+  - StablePetrifiedChest CHEST
+  - StablePetrifiedLegs LEGS
+  - StablePetrifiedFeet FEET
+  - AIR HAND
+  AITargetSelectors:
+  - 1 players
+  DamageModifiers:
+  - ENTITY_ATTACK 0.25
+  - CUSTOM 0.25
+  - PROJECTILE 0
+  - FIRE_TICK 0
+  - FIRE 0
+  - LAVA 0
+  - MAGIC 0
+  Options:
+    MovementSpeed: 0.3
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    PreventTransformation: true
+    Despawn: false
+    FollowRange: 50
+  Drops:
+  - COBBLESTONE: 1728 1
+  Skills:
+  - skill{s=StoneSpawn} @trigger ~onTimer:200
+  - skill{s=SuperStonePrison} ~onTimer:600
+  - skill{s=StoneThrow} @target ~onTimer:50
+  - skill{s=HardResistance} ~onDamaged
+  - skill{s=GroundStoneAura} ~onTimer:1
+  - damage{a=5;i=true} @target ~onAttack
+  - sound{s=item.totem.use;v=10;p=0.5;sc=master} @Self ~onDeath
+ 
