@@ -1,0 +1,25 @@
+summonDarkMissile:
+  Type: cod
+  Options:
+    NoAI: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true  
+    Invincible: true
+    Invisible: true
+  Skills:
+  - skill{s=dPeND} ~onSpawn
+  Disguise: cod
+
+summonFireMissile:
+  Type: cod
+  Options:
+    NoAI: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true  
+    Invincible: true
+    Invisible: true
+  Skills:
+  - skill{s=endFire} ~onSpawn
+  Disguise: cod

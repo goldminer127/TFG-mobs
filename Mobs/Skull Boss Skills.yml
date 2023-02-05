@@ -1,0 +1,83 @@
+###Dark Skull
+
+blackMonitor:
+  Skills:
+  - blackscreen{d=30}
+  - delay 35
+  - potion{type=WITHER;duration=100;level=0}
+  - delay 12
+  - damage{a=2;ia=true}
+  - delay 15
+  - damage{a=3;ia=true}
+  - delay 18
+  - damage{a=4;ia=true}
+  
+darkProjectileStart:
+  Skills:
+  - missile{ot=darkProjectile_TICK;sB=false;v=4;i=1;hR=1;vR=1;md=60;oE=dpend2} @Origin{xoffset=3}
+  - delay 6
+  - missile{ot=darkProjectile_TICK;sB=false;v=4;i=1;hR=1;vR=1;md=60;oE=dpend2} @Origin{xoffset=-3}
+  - delay 6
+  - missile{ot=darkProjectile_TICK;sB=false;v=4;i=1;hR=1;vR=1;md=60;oE=dpend2} @Origin{yoffset=3}
+
+dpend2:
+  Skills:
+  - summon{type=summonDarkMissile}
+
+dPeND:
+  Skills:
+  - delay 6
+  - skill{s=darkProjectile} @PIR{r=100}
+  - delay 70
+  - remove @self
+
+darkProjectile:
+  Skills:
+  - missile{ot=darkProjectile_TICK;oh=darkProjectile_HIT;sB=false;v=6;i=1;hR=1;vR=1;in=0.75}
+
+darkProjectile_TICK:
+  Skills:
+  - effect:particles{p=spell_mob;amount=10} @origin
+
+darkProjectile_HIT:
+  Skills:
+  - effect:particles{p=block;m=black_concrete;a=50;hS=1;vS=1}
+  - damage{a=3;ia=true}
+
+###Fire Skull
+
+ExplosiveBlast:
+  Skills:
+  - explosion{yield=4;f=true} @self
+
+fireProjectileStart:
+  Skills:
+  - missile{ot=fireProjectile_TICK;sB=false;v=4;i=1;hR=1;vR=1;sE=false;hnp=false;md=60;oE=fireEnding} @Origin{xoffset=3}
+  - delay 6
+  - missile{ot=fireProjectile_TICK;sB=false;v=4;i=1;hR=1;vR=1;sE=false;hnp=false;md=60;oE=fireEnding} @Origin{xoffset=-3}
+  - delay 6
+  - missile{ot=fireProjectile_TICK;sB=false;v=4;i=1;hR=1;vR=1;sE=false;hnp=false;md=60;oE=fireEnding} @Origin{yoffset=3}
+
+fireEnding:
+  Skills:
+  - summon{type=summonFireMissile}
+
+endFire:
+  Skills:
+  - delay 6
+  - skill{s=fireProjectile} @PIR{r=100}
+  - delay 70
+  - remove @self
+
+fireProjectile:
+  Skills:
+  - missile{ot=fireProjectile_TICK;oh=fireProjectile_HIT;sB=false;hnp=false;v=6;i=1;hR=1;vR=1;in=0.75}
+
+fireProjectile_TICK:
+  Skills:
+  - effect:particles{p=flame;amount=10} @origin
+
+fireProjectile_HIT:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - damage{a=3;ia=true}

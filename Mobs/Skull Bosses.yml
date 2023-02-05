@@ -1,0 +1,50 @@
+TestSkullDark:
+  Type: BEE
+  Health: 100
+  Options:
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    Invisible: true
+  Equipment:
+  - SKULL HEAD
+  - wither_rose HAND
+  Disguise: Zombie
+  Skills:
+  - skill{s=blackMonitor} ~onTimer:300 @PlayersInRadius{r=100} 
+  - skill{s=darkProjectileStart} ~onTimer:100 @PIR{r=100}
+  AIGoalSelectors:
+  - clear
+  - fleeplayers
+  - randomstroll
+ 
+TestSkullFire:
+  Type: BEE
+  Health: 100
+  Options:
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    Invisible: true
+  Equipment:
+  - SKULL HEAD
+  - blaze_powder HAND
+  Disguise: Zombie
+  Skills:
+  - skill{s=ExplosiveBlast} ~onTimer:300
+  - skill{s=fireProjectileStart} ~onTimer:100 @PIR{r=100}
+  AIGoalSelectors:
+  - clear
+  - fleeplayers
+  - randomstroll
+  DamageModifiers:
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - FIRE 0
+  - FIRE_TICK 0
+  BossBar:
+    Enabled: true
+    Title: '&cFire Skull'
+    Color: RED
