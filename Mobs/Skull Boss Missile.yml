@@ -23,3 +23,113 @@ summonFireMissile:
   Skills:
   - skill{s=endFire} ~onSpawn
   Disguise: cod
+
+summonWindMissile:
+  Type: cod
+  Options:
+    NoAI: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true  
+    Invincible: true
+    Invisible: true
+  Skills:
+  - skill{s=endWind} ~onSpawn
+  Disguise: cod
+  
+summonEarthMissile:
+  Type: cod
+  Options:
+    NoAI: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true  
+    Invincible: true
+    Invisible: true
+  Skills:
+  - skill{s=endEarth} ~onSpawn
+  Disguise: cod
+
+DIRT_HEAD:
+  Type: cod
+  Health: 100
+  Options:
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    Invisible: true
+    Invincible: true
+    NoAI: true
+  Equipment:
+  - DIRT HEAD
+  Disguise: Zombie
+  Skills:
+  - skill{s=DirtThrow} @PIR{r=64;limit=2} ~onTimer:100
+
+STONE_HEAD:
+  Type: cod
+  Health: 100
+  Options:
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    Invisible: true
+    Invincible: true
+    NoAI: true
+  Equipment:
+  - STONE HEAD
+  Disguise: Zombie
+  Skills:
+  - skill{s=StoneThrow} @PIR{r=64;limit=2} ~onTimer:100
+  
+OBSIDIAN_HEAD:
+  Type: cod
+  Health: 100
+  Options:
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    Invisible: true
+    Invincible: true
+    NoAI: true
+  Equipment:
+  - OBSIDIAN HEAD
+  Disguise: Zombie
+  Skills:
+  - skill{s=ObsidianThrow} @PIR{r=64;limit=2} ~onTimer:100
+  
+summonWaterMissile:
+  Type: cod
+  Options:
+    NoAI: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true  
+    Invincible: true
+    Invisible: true
+  Skills:
+  - skill{s=endWater} ~onSpawn
+  Disguise: cod
+  
+summonIceMissile:
+  Type: cod
+  Options:
+    NoAI: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true  
+    Invincible: true
+    Invisible: true
+  Skills:
+  - skill{s=endIce} ~onSpawn
+  Disguise: cod
+  
+meleeStray:
+  Type: Stray
+  Options:
+    PreventOtherDrops: true
+  Equipment:
+  - air HAND
