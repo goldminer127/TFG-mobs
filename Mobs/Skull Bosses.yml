@@ -10,7 +10,6 @@ SkullDark:
   Equipment:
   - SKULL HEAD
   - wither_rose HAND
-  Disguise: Zombie
   Skills:
   - skill{s=blackMonitor} ~onTimer:300 @PIR{r=100} 
   - skill{s=darkProjectileStart} ~onTimer:200
@@ -38,7 +37,6 @@ SkullFire:
   Equipment:
   - SKULL HEAD
   - blaze_powder HAND
-  Disguise: Zombie
   Skills:
   - skill{s=ExplosiveBlast} ~onTimer:300 @self
   - skill{s=ExplosiveBlast} ~onTimer:300 @PIR{r=50}
@@ -69,7 +67,6 @@ SkullWind:
   Equipment:
   - SKULL HEAD
   - feather HAND
-  Disguise: Zombie
   Skills:
   - skill{s=windThrow} ~onTimer:140 @PlayersInRadius{r=100} 
   - skill{s=windProjectileStart} ~onTimer:200
@@ -97,7 +94,6 @@ SkullEarth:
   Equipment:
   - SKULL HEAD
   - dirt HAND
-  Disguise: Zombie
   Skills:
   - randomskill{skills= summonObbyHead 1, summonStoneHead 4, summonDirtHead 4} @self ~onTimer:160
   - skill{s=earthProjectileStart} ~onTimer:200
@@ -126,7 +122,6 @@ SkullWater:
   Equipment:
   - SKULL HEAD
   - water_bucket HAND
-  Disguise: Zombie
   Skills:
   - skill{s=TridentBarrage} @PIR{r=64} ~onTimer:190
   - skill{s=waterProjectileStart} ~onTimer:200
@@ -159,7 +154,6 @@ SkullIce:
   Equipment:
   - SKULL HEAD
   - blue_ice HAND
-  Disguise: Zombie
   Skills:
   - skill{s=summonMeleeStray} @self ~onTimer:90
   - skill{s=IceSkullField} @PIR{r=64} ~onTimer:15
